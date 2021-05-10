@@ -1,3 +1,10 @@
+:root{
+    --black: #2A2529;
+    --dark-blue: #21212C;
+    --date-blue: #CCDAFF;
+    --gray-active: #EAEAEA;
+    --gray-off: #7C7777;
+}
 *{
     box-sizing: border-box;
     margin: 0;
