@@ -17,6 +17,10 @@ html {
     font-weight: normal;
     background-color: var(--dark-blue);
 }
+a{
+    text-decoration: none;
+    color: var(--white-text);
+}
 header nav{
    background-color: var(--black);
    color: var(--white-text); 
