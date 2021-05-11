@@ -55,6 +55,7 @@ main .img-container img{
     height: 181px;
     border-radius: 100px;
     background-position: cover;
+    object-fit: cover;
     background-size: cover;
     background-repeat: no-repeat;
     margin-bottom: 60px;
