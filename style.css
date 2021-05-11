@@ -4,7 +4,7 @@
     --date-blue: #CCDAFF;
     --gray-active: #EAEAEA;
     --gray-off: #7C7777;
-    --white-text: #ffffff;
+    --white-text: #FFFCFC;
 }
 *{
     box-sizing: border-box;
@@ -14,6 +14,8 @@
 html {
     font-size: 62.5%;
     font-family: 'Roboto', sans-serif;
+    font-weight: normal;
+    background-color: var(--dark-blue);
 }
 header nav{
    background-color: var(--black);
@@ -31,6 +33,7 @@ header nav h1{
 main{
     background-color: var(--dark-blue);
     justify-content: center;
+    height: 85vh;
 }
 main .img-container{
     display: flex;
@@ -48,3 +51,42 @@ main .img-container img{
     background-repeat: no-repeat;
     margin-bottom: 60px;
 }
+section.text-container{
+    background-color: var(--black);
+    margin:0px 40px 40px 40px;
+    line-height: 30px;
+    padding: 15px;
+}
+section.text-container div.text-description{
+    color: var(--white-text);
+    padding: 5px;
+    margin: 10px 3px 40px 3px;
+    font-size: 2.6rem;
+}
+
+/* Rectangle 1
+
+position: absolute;
+width: 340px;
+height: 303px;
+left: 38px;
+top: 314px;
+
+background: #2A2529; */
+
+/* Hi, I'm Jorge. 🥝 I’m a developer, I love to do cool projects and writing about them,I also create YouTube videos about tech things and I love to listen to music! */
+
+/* position: absolute;
+width: 286px;
+height: 210px;
+left: 65px;
+top: 346px;
+
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 26px;
+line-height: 30px;
+
+color: #FFFCFC; */
+
