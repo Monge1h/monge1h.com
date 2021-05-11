@@ -5,6 +5,10 @@
     --gray-active: #EAEAEA;
     --gray-off: #7C7777;
     --white-text: #FFFCFC;
+    --linkedin-color: #0A66C2;
+    --web-color: #657EFF;
+    --yt-color: #FF0000;
+    --spotify-color: #1ED760;
 }
 *{
     box-sizing: border-box;
@@ -68,29 +72,15 @@ section.text-container div.text-description{
     font-size: 2.6rem;
 }
 
-/* Rectangle 1
-
-position: absolute;
-width: 340px;
-height: 303px;
-left: 38px;
-top: 314px;
-
-background: #2A2529; */
-
-/* Hi, I'm Jorge. 🥝 I’m a developer, I love to do cool projects and writing about them,I also create YouTube videos about tech things and I love to listen to music! */
-
-/* position: absolute;
-width: 286px;
-height: 210px;
-left: 65px;
-top: 346px;
-
-font-family: Roboto;
-font-style: normal;
-font-weight: normal;
-font-size: 26px;
-line-height: 30px;
-
-color: #FFFCFC; */
-
+p .linkedin-a{
+    color: var(--linkedin-color);
+}
+p .this-website-a{
+    color: var(--web-color);
+}
+p .yt-a{
+    color: var(--yt-color);
+}
+p .spotify-a{
+    color: var(--spotify-color);
+}
