@@ -4,6 +4,7 @@
     --date-blue: #CCDAFF;
     --gray-active: #EAEAEA;
     --gray-off: #7C7777;
+    --white-text: #ffffff;
 }
 *{
     box-sizing: border-box;
@@ -13,4 +14,17 @@
 html {
     font-size: 62.5%;
     font-family: 'Roboto', sans-serif;
+}
+header nav{
+   background-color: var(--black);
+   color: var(--white-text); 
+   display: flex;
+   justify-content: center;
+   height: 59px;
+   text-align: center;
+}
+header nav h1{
+   font-size: 2.4rem;
+   font-weight: normal;
+   align-self: center;
 }
