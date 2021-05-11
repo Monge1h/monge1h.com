@@ -28,3 +28,23 @@ header nav h1{
    font-weight: normal;
    align-self: center;
 }
+main{
+    background-color: var(--dark-blue);
+    justify-content: center;
+}
+main .img-container{
+    display: flex;
+    width: 100vw;
+    align-self: center;
+    justify-content: center;
+}
+main .img-container img{
+    margin-top: 80px;
+    min-width: 176px;
+    height: 181px;
+    border-radius: 100px;
+    background-position: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-bottom: 60px;
+}
