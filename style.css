@@ -85,14 +85,20 @@ p .yt-a{
 p .spotify-a{
     color: var(--spotify-color);
 }
-#menu{
+#menu-bar, #menu-bg{
     position: fixed;
+    bottom: 1%;
+    right: 3%;
+}
+#menu{
     width: 35px;
     height: 30px;
     margin: 30px 0 20px 20px;
     cursor: pointer;
-    bottom: 1%;
-    right: 3%;
+}
+.nav{
+    display: none;
+    transition: 0.3s ease;
 }
 .bar{
     height: 5px;
@@ -100,6 +106,7 @@ p .spotify-a{
     background-color: var(--gray-active);
     display: block;
     border-radius: 5px;
+    transition: 0.3s ease;
 }
 #bar1{
     transform: translateY(-4px);
@@ -108,5 +115,52 @@ p .spotify-a{
     transform: translateY(4px);
 }
 .change .bar{
-    background-color: var(--gray-off);
+    background-color: var(--white-text);
+}
+.change #bar1{
+    transform: translateY(4px) rotateZ(-45deg);
+}
+.change #bar3{
+    transform: translateY(-6px) rotateZ(45deg);
+}
+.change #bar2{
+    opacity: 0;
+}
+.nav li{
+    padding: 16px 0;
+    list-style: none;
+}
+.nav li a{
+    color: var(--white-text);
+    font-size: 2rem;
+}
+.nav ul{
+    padding: 0;
+    margin: 0 50px;
+    transition: 0.3s ease;
+    display: none;
+}
+.change, ul{
+    display: block;
+}
+
+.menu-bg{
+    z-index: -1;
+    width: 0;
+    height: 0;
+    background: radial-gradient(circle,var(--black),var(--dark-blue));
+    transition: 0.3s ease;
+    border-radius: 50%;
+}
+.menu-bg, #menu-bar{
+    bottom: 1%;
+    right: 3%;
+}
+#menu-ul{
+    z-index: 2;
+}
+.change-bg{
+    width: 550px;
+    height: 540px;
+    transform: translate(60%,30%);
 }
