@@ -95,6 +95,9 @@ p .spotify-a{
     height: 30px;
     margin: 30px 0 20px 20px;
     cursor: pointer;
+    position: fixed;
+    bottom: 1%;
+    right: 3%;
 }
 .nav{
     display: none;
@@ -163,4 +166,7 @@ p .spotify-a{
     width: 550px;
     height: 540px;
     transform: translate(60%,30%);
+}
+#menu-bar{
+    margin-bottom: 70px;
 }
