@@ -8,11 +8,26 @@
     <title>Jorge Monge</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
+    <script src="script.js" defer></script>
 </head>
 <body>
    <header>
        <nav>
            <h1>Jorge Monge</h1>
+            <section id="menu-bar">
+                <ul id="menu-ul" class="nav" id="nav">
+                    <li><a href="#">ABOUT</a></li>
+                    <li><a href="#">BLOG</a></li>
+                    <li><a href="#">PROJECTS</a></li>
+                    <li><a href="#">CONTACT</a></li>
+                </ul>
+                <div class="menu-bg" id="menu-bg"></div>
+                <div id="menu" onclick="onClickMenu()">
+                        <div id="bar1" class="bar"></div>
+                        <div id="bar2" class="bar"></div>
+                        <div id="bar3" class="bar"></div>
+                </div>
+            </section>
        </nav>
    </header> 
    <main>
@@ -29,14 +44,7 @@
         </div>
        </section>
    </main>
-   <section id="menu-bar">
-       <div id="menu">
-            <div id="bar1" class="bar"></div>
-            <div id="bar2" class="bar"></div>
-            <div id="bar3" class="bar"></div>
-       </div>
-   </section>
-   <span>x</span>
+
    <footer>
    </footer>
 </body>
