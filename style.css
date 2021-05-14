@@ -179,3 +179,48 @@ p .spotify-a{
     font-weight: normal;
     padding: 28px;
 }
+.blog-posts{
+    margin-top: 15px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.card-post{
+    background-color: var(--black);
+    margin: 20px;
+}
+.card-post img{
+    width: 95%;
+    margin: 10px;
+    height: 70%;
+    max-height: 200px;
+    object-fit: cover;
+}
+.img-card-container{
+    display: flex;
+    justify-content: center;
+}
+.post-card--content{
+    padding: 10px 20px;
+}
+.post-card--content__title{
+    color: #ffffff;
+    font-size: 2.4rem;
+    font-weight: normal;
+    line-height: 28px;
+    margin-bottom: 20px;
+}
+.post-card--content__description{
+    color: var(--white-text);
+    font-size: 1.4rem;
+    font-weight: normal;
+    font-style: normal;
+    line-height: 16px;
+}
+.post-card--content__date{
+    color: var(--date-blue);
+    display: flex;
+    justify-content: flex-end;
+    font-size: 1.4rem;
+    font-weight: normal;
+    font-style: normal;
+}
