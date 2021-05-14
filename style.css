@@ -177,7 +177,7 @@ p .spotify-a{
     color: var(--white-text);
     font-size: 2.4rem;
     font-weight: normal;
-    padding: 28px;
+    padding: 15px 28px;
 }
 .blog-posts{
     display: flex;
