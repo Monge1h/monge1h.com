@@ -170,3 +170,6 @@ p .spotify-a{
 #menu-bar{
     margin-bottom: 70px;
 }
+.link{
+    text-decoration: underline;
+}
