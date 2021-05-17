@@ -1,0 +1,13 @@
+section.text-container,main.post-container{
+    margin: 0px 150px 40px 150px;   
+}
+section.blog-posts{
+    flex-wrap: wrap;
+    margin: 10px;
+    align-items: center;
+    justify-content: center;
+}
+.card-post{
+    margin: 20px;
+    max-width: 360px;
+}
