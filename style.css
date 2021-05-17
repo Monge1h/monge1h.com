@@ -210,7 +210,7 @@ p .spotify-a{
 }
 .post-card--content__description{
     color: var(--white-text);
-    font-size: 1.4rem;
+    font-size: 1.4remi;
     font-weight: normal;
     font-style: normal;
     line-height: 16px;
