@@ -39,3 +39,18 @@ main .img-container img{
     width: 100%;
     height: 100%;
 }
+
+/* post */
+section.text-container, main.post-container {
+    margin: auto;
+    padding: 66px 10px 10px;
+    max-width: 1140px;
+}
+
+.post-container-imgcont{
+    height: 500px;
+}
+.post-container-imgcont__img{
+    max-height: 100%;
+    object-fit: cover;
+}
