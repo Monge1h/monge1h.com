@@ -52,3 +52,9 @@ section.text-container, main.post-container {
     max-height: 100%;
     object-fit: cover;
 }
+/* blogs */
+.main-container-blog-posts{
+    margin: auto;
+    padding: 66px 0px 0px;
+    max-width: 1140px;
+}
