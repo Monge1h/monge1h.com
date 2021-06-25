@@ -253,3 +253,10 @@ section.text-container div.text-description{
 .post-date{
     padding-bottom: 70px;
 }
+.contact-links{
+    padding-left: 30px;
+    word-spacing: 10px;
+}
+.list{
+    padding-bottom: 10px;
+}
