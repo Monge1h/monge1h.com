@@ -73,16 +73,16 @@ section.text-container div.text-description{
     font-size: 2.6rem;
 }
 
-p .linkedin-a{
+.linkedin-a{
     color: var(--linkedin-color);
 }
-p .this-website-a{
+.this-website-a{
     color: var(--web-color);
 }
-p .yt-a{
+.yt-a{
     color: var(--yt-color);
 }
-p .spotify-a{
+.spotify-a{
     color: var(--spotify-color);
 }
 #menu-bar, #menu-bg{
