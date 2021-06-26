@@ -76,7 +76,7 @@ section.contact-text-container{
     background-color: var(--black);
     margin:0px 40px 40px 40px;
     line-height: 30px;
-    padding: 15px;
+    padding: 30px 20px 65px 20px;
     font-size: 2.6rem;
 }
 section.contact-container div.contact-text-description{
