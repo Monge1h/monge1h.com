@@ -76,13 +76,11 @@ section.contact-text-container{
     background-color: var(--black);
     margin:0px 40px 40px 40px;
     line-height: 30px;
-    padding: 30px 20px 65px 20px;
-    font-size: 2.6rem;
 }
-section.contact-container div.contact-text-description{
-    color: var(--white-text);
+section.contact-text-container div.contact-text-description{
     padding: 5px;
     margin: 10px 3px 40px 3px;
+    font-size: 2.6rem;
 }
 
 .linkedin-a{
