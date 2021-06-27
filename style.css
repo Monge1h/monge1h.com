@@ -273,3 +273,13 @@ section.contact-text-container div.contact-text-description{
 .list{
     padding-bottom: 10px;
 }
+#overlay{
+    background-color:red;
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    z-index: -1;
+    display:none;
+}
