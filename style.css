@@ -111,6 +111,7 @@ section.contact-text-container div.contact-text-description{
     position: fixed;
     bottom: 1%;
     right: 3%;
+    z-index: 501;
 }
 .nav{
     display: none;
@@ -274,7 +275,7 @@ section.contact-text-container div.contact-text-description{
     padding-bottom: 10px;
 }
 #overlay{
-    background-color:red;
+    background-color:transparent;
     position:fixed;
     top:0;
     left:0;
@@ -284,5 +285,5 @@ section.contact-text-container div.contact-text-description{
     display:none;
 }
 #menu-bar{
-    z-index: 500;
+    z-index: 5;
 }
