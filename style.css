@@ -276,7 +276,7 @@ section.contact-text-container div.contact-text-description{
 }
 #overlay{
     background-color:transparent;
-    backdrop-filter: blur(2px);
+    /* backdrop-filter: blur(2px); */
     position:fixed;
     top:0;
     left:0;
