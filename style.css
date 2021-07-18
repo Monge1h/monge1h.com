@@ -9,6 +9,7 @@
     --web-color: #657EFF;
     --yt-color: #FF0000;
     --spotify-color: #1ED760;
+    --dribbble-color: #E84B87;
 }
 *{
     box-sizing: border-box;
@@ -91,6 +92,9 @@ section.contact-text-container div.contact-text-description{
 }
 .yt-a{
     color: var(--yt-color);
+}
+.dribbble-a{
+    color: var(--dribbble-color);
 }
 .spotify-a{
     color: var(--spotify-color);
