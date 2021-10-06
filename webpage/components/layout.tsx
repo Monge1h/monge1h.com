@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import NavBar from './navBar'
 
 export const siteTitle = "Jorge Monge"
 
@@ -14,6 +15,9 @@ export default function Layout({children}:{
 					content=""
 				/>
 			</Head>
+			<header>
+				<NavBar/>
+			</header>
 			<main>{children}</main>
 			<h1>h</h1>
 		</div>
