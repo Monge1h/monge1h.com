@@ -1,3 +1,16 @@
+:root{
+    --black: #2A2529;
+    --dark-blue: #21212C;
+    --date-blue: #CCDAFF;
+    --gray-active: #EAEAEA;
+    --gray-off: #7C7777;
+    --white-text: #FFFCFC;
+    --linkedin-color: #0A66C2;
+    --web-color: #657EFF;
+    --yt-color: #FF0000;
+    --spotify-color: #1ED760;
+    --dribbble-color: #E84B87;
+}
 html,
 body {
   padding: 0;
