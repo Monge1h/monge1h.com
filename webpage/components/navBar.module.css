@@ -17,7 +17,7 @@
     transition: 0.3s ease;
 }
 .nav li{
-    padding: 16px 0;
+    padding: 6px 0;
     list-style: none;
 }
 .nav li a{
@@ -92,3 +92,32 @@
     z-index: 1;
     display:none;
 }
+
+
+
+
+
+
+
+
+
+/* laptop */
+/* (min-width: 1024px) */
+@media (min-width: 1024px) {
+    .navContainer{
+        justify-content: space-around;
+    }
+    .navContainer section ul li{
+        margin: 0 35px;
+    }
+    #menu{
+        display: none;
+        /* position: absolute; */
+     } 
+    #menu_bar{
+        position: inherit;
+    }
+    .nav{
+        display: flex;
+    }       
+   }
