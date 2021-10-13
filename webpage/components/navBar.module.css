@@ -93,7 +93,22 @@
     display:none;
 }
 
+.change .bar{
+    background-color: var(--white-text);
+}
+.change #bar1{
+    transform: translateY(4px) rotateZ(-45deg);
+}
+.change #bar3{
+    transform: translateY(-6px) rotateZ(45deg);
+}
+.change #bar2{
+    opacity: 0;
+}
 
+/* .change, ul{
+    display: block;
+} */
 
 
 

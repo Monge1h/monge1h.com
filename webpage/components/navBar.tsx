@@ -1,6 +1,10 @@
+import {useState} from 'react'
 import styles from './navBar.module.css'
 
 export default function NavBar(){
+    const [sideBar, setSideBar] = useState(false)
+
+    const toggleMenu = () => setSideBar(!sideBar)
 	return (
 <nav className={styles.navContainer}>
            <h1 className={styles.h1}>Jorge Monge</h1>
@@ -13,8 +17,8 @@ export default function NavBar(){
                 </ul>
                 <div className={styles.menu_bg} id={styles.menu_bg}></div>
             </section>
-            <div id={styles.overlay}></div>
-            <div id={styles.menu}>
+            <div id={styles.overlay} ></div>
+            <div id={styles.menu} className={sideBar? styles.change : ''} onClick={toggleMenu}>
                     <div id={styles.bar1} className={styles.bar}></div>
                     <div id={styles.bar2} className={styles.bar}></div>
                     <div id={styles.bar3} className={styles.bar}></div>
