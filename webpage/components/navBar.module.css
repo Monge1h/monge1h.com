@@ -34,7 +34,7 @@
 #menu_ul{
     z-index: 2;
 }
-#menu_bar, #menu-bg{
+#menu_bar, #menu_bg_id{
     position: fixed;
     bottom: 1%;
     right: 3%;
@@ -47,7 +47,7 @@
     z-index: -1;
     width: 0;
     height: 0;
-    background: radial-gradient(circle,var(--black),var(--dark-blue));
+    background: red;
     transition: 0.3s ease;
     border-radius: 50%;
 }
@@ -78,9 +78,6 @@
 #menu_bar{
     margin-bottom: 70px;
 }
-#menu_bar{
-    z-index: 5;
-}
 #overlay{
     background-color:rgba(0, 0, 0, 0.5);
     /* backdrop-filter: blur(2px); */
@@ -106,14 +103,22 @@
     opacity: 0;
 }
 
-/* .change, ul{
+.change, #menu_ul{
     display: block;
-} */
+}
+
+.change_bg{
+    width: 550px;
+    height: 540px;
+    transform: translate(60%,30%);
+}
 
 
 
 
-
+#menu_bar{
+    z-index: 5;
+}
 
 
 /* laptop */
@@ -135,4 +140,8 @@
     .nav{
         display: flex;
     }       
+
+    .change, #menu_ul{
+        display: flex;
+    }
    }
