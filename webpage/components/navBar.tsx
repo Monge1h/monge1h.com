@@ -17,7 +17,7 @@ export default function NavBar(){
                 </ul>
                 <div className={`${styles.menu_bg} ${sideBar ? styles.change_bg :''}`} id={styles.menu_bg_id} ></div>
             </section>
-            <div id={styles.overlay}></div>
+            <div className={`${styles.overlay} ${sideBar ? styles.overlay_display:''} `}></div>
             <div id={styles.menu} className={sideBar? styles.change : ''} onClick={toggleMenu}>
                     <div id={styles.bar1} className={styles.bar}></div>
                     <div id={styles.bar2} className={styles.bar}></div>

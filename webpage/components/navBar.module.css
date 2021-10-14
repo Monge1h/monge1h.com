@@ -78,7 +78,7 @@
 #menu_bar{
     margin-bottom: 70px;
 }
-#overlay{
+.overlay{
     background-color:rgba(0, 0, 0, 0.5);
     /* backdrop-filter: blur(2px); */
     position:fixed;
@@ -88,6 +88,9 @@
     bottom:0;
     z-index: 1;
     display:none;
+}
+.overlay_display{
+    display: block;
 }
 
 .change .bar{
