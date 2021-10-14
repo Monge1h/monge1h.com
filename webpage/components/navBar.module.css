@@ -17,7 +17,7 @@
     transition: 0.3s ease;
 }
 .nav li{
-    padding: 6px 0;
+    padding: 16px 0;
     list-style: none;
 }
 .nav li a{
@@ -31,7 +31,7 @@
     display: none;
 }
 
-#menu_ul{
+.menu_ul{
     z-index: 2;
 }
 #menu_bar, #menu_bg_id{
@@ -47,7 +47,7 @@
     z-index: -1;
     width: 0;
     height: 0;
-    background: red;
+    background:radial-gradient(circle,var(--black),var(--dark-blue));;
     transition: 0.3s ease;
     border-radius: 50%;
 }
@@ -103,7 +103,7 @@
     opacity: 0;
 }
 
-.change, #menu_ul{
+.change{
     display: block;
 }
 
@@ -141,7 +141,7 @@
         display: flex;
     }       
 
-    .change, #menu_ul{
+    .change, .menu_ul{
         display: flex;
     }
    }

@@ -9,7 +9,7 @@ export default function NavBar(){
 <nav className={styles.navContainer}>
            <h1 className={styles.h1}>Jorge Monge</h1>
             <section id={styles.menu_bar}>
-                <ul id={styles.menu_ul} className={`${styles.nav}`}>
+                <ul className={`${styles.nav} ${sideBar? styles.change : ""}`}>
                     <li><a href="#">ABOUT</a></li>
                     <li><a href="/blog.html">BLOG</a></li>
                     <li><a href="#">PROJECTS</a></li>
