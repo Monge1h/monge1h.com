@@ -147,4 +147,7 @@
     .change, .menu_ul{
         display: flex;
     }
+    .nav li{
+        padding: 6px 0;
+    }
    }
