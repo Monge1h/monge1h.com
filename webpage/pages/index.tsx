@@ -17,11 +17,11 @@ const Home: NextPage = () => {
           </div>
           <section className={styles.text_container}>
             <div className={styles.text_description}>
-            <p>Hi, I&apos;m a <a className="linkedin-a link" target="_blank" href="https://www.linkedin.com/in/monge1h/">Jorge.</a> 🥝<br/>
+            <p>Hi, I&apos;m a <a className="linkedin-a link" target="_blank" href="https://www.linkedin.com/in/monge1h/" rel="noreferrer">Jorge.</a> 🥝<br/>
         I’m a developer, I love to do cool <a className="this-website-a link" href="">projects</a> and 
         <a className="this-website-a link" href="/blog.html"> writing</a> about them,I also create{" "}
-        <a className="yt-a link" target="_blank" href="https://www.youtube.com/monge1h">YouTube videos</a> about tech things and I love to listen
-        to <a target="_blank" className="spotify-a link" href="https://open.spotify.com/user/12125703988?si=a265bf6ed44d4c9c">music!</a></p>
+        <a className="yt-a link" target="_blank" href="https://www.youtube.com/monge1h" rel="noreferrer">YouTube videos</a> about tech things and I love to listen
+        to <a target="_blank" className="spotify-a link" href="https://open.spotify.com/user/12125703988?si=a265bf6ed44d4c9c" rel="noreferrer">music!</a></p>
             </div>
           </section>
       </main>
