@@ -19,7 +19,6 @@ export default function Layout({children}:{
 				<NavBar/>
 			</header>
 			<main>{children}</main>
-			<h1>h</h1>
 		</div>
 	)
 }
