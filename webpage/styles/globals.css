@@ -33,3 +33,22 @@ a {
 * {
   box-sizing: border-box;
 }
+
+.linkedin-a{
+    color: var(--linkedin-color);
+}
+.this-website-a{
+    color: var(--web-color);
+}
+.yt-a{
+    color: var(--yt-color);
+}
+.dribbble-a{
+    color: var(--dribbble-color);
+}
+.spotify-a{
+    color: var(--spotify-color);
+}
+.github-a{
+    color: var(--white-text);
+}
