@@ -12,7 +12,7 @@ export default function NavBar(){
             <section id={styles.menu_bar}>
                 <ul className={`${styles.nav} ${sideBar? styles.change : ""}`}>
                     <li><Link href="/"><a >ABOUT</a></Link></li>
-                    <li><a href="/blog.html">BLOG</a></li>
+                    <li><Link href="/blog"><a >BLOG</a></Link></li>
                     <li><a href="#">PROJECTS</a></li>
                     <li><Link href="/contact"><a >CONTACT</a></Link></li>
                 </ul>
