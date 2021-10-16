@@ -1,4 +1,5 @@
 import {useState} from 'react'
+import Link from 'next/link'
 import styles from './navBar.module.css'
 
 export default function NavBar(){
@@ -10,10 +11,10 @@ export default function NavBar(){
            <h1 className={styles.h1}>Jorge Monge</h1>
             <section id={styles.menu_bar}>
                 <ul className={`${styles.nav} ${sideBar? styles.change : ""}`}>
-                    <li><a href="#">ABOUT</a></li>
+                    <li><Link href="/"><a >ABOUT</a></Link></li>
                     <li><a href="/blog.html">BLOG</a></li>
                     <li><a href="#">PROJECTS</a></li>
-                    <li><a href="/contact.html">CONTACT</a></li>
+                    <li><Link href="/contact"><a >CONTACT</a></Link></li>
                 </ul>
                 <div className={`${styles.menu_bg} ${sideBar ? styles.change_bg :''}`} id={styles.menu_bg_id} ></div>
             </section>
