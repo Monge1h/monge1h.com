@@ -55,3 +55,6 @@ a {
 .link{
     text-decoration: underline;
 }
+.list{
+    padding-bottom: 10px;
+}
