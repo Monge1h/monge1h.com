@@ -1,0 +1,32 @@
+
+.title_post{
+	color: var(--white-text);
+	font-size: 2.4rem;
+	font-weight: normal;
+	padding: 15px 28px;
+}
+
+.blog_posts{
+    display: flex;
+    flex-wrap: wrap;
+}
+/* tablet */
+@media (min-width: 768px) {
+
+	.blog_posts{
+		flex-wrap: wrap;
+		margin: 10px;
+		align-items: center;
+		justify-content: center;
+	}
+}
+/* laptop */
+/* (min-width: 1024px) */
+@media (min-width: 1024px) {
+	/* blogs */
+	.main_container_blog_posts{
+		margin: auto;
+		padding: 66px 0px 0px;
+		max-width: 1140px;
+	}
+}
