@@ -8,7 +8,7 @@ export default function NavBar(){
     const toggleMenu = () => setSideBar(!sideBar)
 	return (
 <nav className={styles.navContainer}>
-           <h1 className={styles.h1}>Jorge Monge</h1>
+          <Link href="/"><a><h1 className={styles.h1}>Jorge Monge</h1></a></Link> 
             <section id={styles.menu_bar}>
                 <ul className={`${styles.nav} ${sideBar? styles.change : ""}`}>
                     <li><Link href="/"><a >ABOUT</a></Link></li>
