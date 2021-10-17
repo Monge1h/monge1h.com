@@ -1,5 +1,3 @@
-import Image from 'next/image'
-import {useState} from 'react'
 import Link from 'next/link'
 import styles from './postCard.module.css'
 
@@ -7,10 +5,11 @@ export default function PostCard(data:
     {
         title:string, 
         date:string ,
-        post_description:string
+        post_description:string,
+        id: string
     }){
 	return (
-           <a href="/post.html">
+          <Link href={`/blog/${data.id}`}><a>
                <article className={styles.card_post}>
                    <div className={styles.img_card_container}>
                         <img  src="/images/alien.gif" alt="hotdog"/>
@@ -26,5 +25,6 @@ export default function PostCard(data:
                     </div>
                 </article>
             </a>
+        </Link> 
 	)
 }
