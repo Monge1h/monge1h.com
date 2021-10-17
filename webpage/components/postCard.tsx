@@ -7,7 +7,7 @@ export default function PostCard(data:
     {
         title:string, 
         date:string ,
-        text_introduction:string
+        post_description:string
     }){
 	return (
            <a href="/post.html">
@@ -20,7 +20,7 @@ export default function PostCard(data:
                             {data.title}
                         </div>
                         <p className={styles.post_card__content__description}>
-                            {data.text_introduction} 
+                            {data.post_description} 
                         </p>
                         <time className={styles.post_card__content__date}>{data.date}</time>
                     </div>

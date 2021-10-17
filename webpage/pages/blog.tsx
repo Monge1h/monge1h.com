@@ -21,6 +21,7 @@ export default function Contact({
     date: string
     title: string
     id: string
+    post_description: string
   }[]
 }){
 	return (
@@ -34,8 +35,8 @@ export default function Contact({
 					Posts:
 				</h2>
 				<section className={styles.blog_posts}>
-					{ allPostsData.map(({id, date, title})=>(
-						<PostCard key={id}/>
+					{ allPostsData.map(({id, date, title, post_description})=>(
+						<PostCard key={id} title={title} date={date} post_description={post_description}/>
 					)) }
        			</section>
 			</main>
