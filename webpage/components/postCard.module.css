@@ -1,17 +1,7 @@
-.card_post{
-    background-color: var(--black);
-    margin: 20px;
-}
-.card_post img{
-    width: 95%;
-    margin: 10px;
-    height: 70%;
-    max-height: 200px;
-    object-fit: cover;
-}
 .img_card_container{
     display: flex;
     justify-content: center;
+    position: relative;
 }
 
 .post_card__content{
@@ -40,6 +30,17 @@
     font-style: normal;
 }
 
+.card_post{
+    background-color: var(--black);
+    margin: 20px;
+}
+.card_post img{
+    width: 95%;
+    margin: 10px;
+    height: 70%;
+    max-height: 200px;
+    object-fit: cover;
+}
 
 /* tablet */
 @media (min-width: 768px) {
@@ -50,6 +51,7 @@
 		max-width: 330px;
 	}
 	.card_post img{
+        object-fit: cover;
 		min-height: 200px;
 	}
 }

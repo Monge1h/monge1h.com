@@ -13,7 +13,7 @@ export default function PostCard(data:
            <a href="/post.html">
                <article className={styles.card_post}>
                    <div className={styles.img_card_container}>
-                       <Image src="/images/alien.gif" alt="hotdog" width={133} height={123}/>
+                        <img  src="/images/alien.gif" alt="hotdog"/>
                     </div>
                     <div className={styles.post_card__content}>
                         <div className={styles.post_card__content__title}>
