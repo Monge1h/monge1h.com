@@ -3,7 +3,12 @@ import {useState} from 'react'
 import Link from 'next/link'
 import styles from './postCard.module.css'
 
-export default function PostCard(){
+export default function PostCard(data:
+    {
+        title:string, 
+        date:string ,
+        text_introduction:string
+    }){
 	return (
            <a href="/post.html">
                <article className={styles.card_post}>
@@ -12,13 +17,12 @@ export default function PostCard(){
                     </div>
                     <div className={styles.post_card__content}>
                         <div className={styles.post_card__content__title}>
-                            Hello World
+                            {data.title}
                         </div>
                         <p className={styles.post_card__content__description}>
-                            Hi, I&apos;m Jorge. 🥝 <br/>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sagittis aliquet massa, eget aliquet metus. In et scelerisque nibh. Praesent mattis, metus.
+                            {data.text_introduction} 
                         </p>
-                        <time className={styles.post_card__content__date}>02/12/2021</time>
+                        <time className={styles.post_card__content__date}>{data.date}</time>
                     </div>
                 </article>
             </a>
