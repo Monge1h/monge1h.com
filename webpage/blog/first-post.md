@@ -1,7 +1,7 @@
 ---
 title: 'Two Forms of Pre-rendering'
 date: '2020-01-01'
-text_introduction: 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..
+post_description: 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..
 Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..'
 ---
 
