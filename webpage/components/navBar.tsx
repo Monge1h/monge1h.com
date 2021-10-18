@@ -1,9 +1,12 @@
 import {useState} from 'react'
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 import styles from './navBar.module.css'
 
 export default function NavBar(){
     const [sideBar, setSideBar] = useState(false)
+
+    const path = useRouter()
 
     const toggleMenu = () => setSideBar(!sideBar)
 	return (
@@ -11,10 +14,10 @@ export default function NavBar(){
           <Link href="/"><a><h1 className={styles.h1}>Jorge Monge</h1></a></Link> 
             <section id={styles.menu_bar}>
                 <ul className={`${styles.nav} ${sideBar? styles.change : ""}`}>
-                    <li><Link href="/"><a >ABOUT</a></Link></li>
-                    <li><Link href="/blog"><a >BLOG</a></Link></li>
-                    <li><a href="#">PROJECTS</a></li>
-                    <li><Link href="/contact"><a >CONTACT</a></Link></li>
+                    <li><Link href="/"><a id={path.route == "/" ?styles.active:""}>ABOUT</a></Link></li>
+                    <li><Link href="/blog"><a id={path.route.includes("/blog") ?styles.active:""}>BLOG</a></Link></li>
+                    <li><a href="#" id={path.route == "/projects" ?styles.active:""}>PROJECTS</a></li>
+                    <li><Link href="/contact"><a id={path.route == "/contact" ?styles.active:""}>CONTACT</a></Link></li>
                 </ul>
                 <div className={`${styles.menu_bg} ${sideBar ? styles.change_bg :''}`} id={styles.menu_bg_id} ></div>
             </section>
