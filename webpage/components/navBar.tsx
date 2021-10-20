@@ -16,7 +16,7 @@ export default function NavBar(){
                 <ul className={`${styles.nav} ${sideBar? styles.change : ""}`}>
                     <li><Link href="/"><a id={path.route == "/" ?styles.active:""}>ABOUT</a></Link></li>
                     <li><Link href="/blog"><a id={path.route.includes("/blog") ?styles.active:""}>BLOG</a></Link></li>
-                    <li><a href="#" id={path.route == "/projects" ?styles.active:""}>PROJECTS</a></li>
+                    <li><Link href="/projects" ><a id={path.route.includes("/projects") ? styles.active:""}>PROJECTS</a></Link></li>
                     <li><Link href="/contact"><a id={path.route == "/contact" ?styles.active:""}>CONTACT</a></Link></li>
                 </ul>
                 <div className={`${styles.menu_bg} ${sideBar ? styles.change_bg :''}`} id={styles.menu_bg_id} ></div>
