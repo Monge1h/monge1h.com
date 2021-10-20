@@ -14,10 +14,10 @@ export default function NavBar(){
           <Link href="/"><a><h1 className={styles.h1}>Jorge Monge</h1></a></Link> 
             <section id={styles.menu_bar}>
                 <ul className={`${styles.nav} ${sideBar? styles.change : ""}`}>
-                    <li><Link href="/"><a id={path.route == "/" ?styles.active:""}>ABOUT</a></Link></li>
-                    <li><Link href="/blog"><a id={path.route.includes("/blog") ?styles.active:""}>BLOG</a></Link></li>
+                    <li><Link href="/"><a id={path.route == "/" ? styles.active:""}>ABOUT</a></Link></li>
+                    <li><Link href="/blog"><a id={path.route.includes("/blog") ? styles.active:""}>BLOG</a></Link></li>
                     <li><Link href="/projects" ><a id={path.route.includes("/projects") ? styles.active:""}>PROJECTS</a></Link></li>
-                    <li><Link href="/contact"><a id={path.route == "/contact" ?styles.active:""}>CONTACT</a></Link></li>
+                    <li><Link href="/contact"><a id={path.route == "/contact" ? styles.active:""}>CONTACT</a></Link></li>
                 </ul>
                 <div className={`${styles.menu_bg} ${sideBar ? styles.change_bg :''}`} id={styles.menu_bg_id} ></div>
             </section>
