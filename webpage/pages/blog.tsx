@@ -6,7 +6,7 @@ import styles from '../styles/Blog.module.css'
 import { getSortedPostsData } from "../lib/posts"
 
 export async function getStaticProps() {
-	const allPostsData = getSortedPostsData()
+	const allPostsData = getSortedPostsData(true)
 	return {
 		props:{
 			allPostsData
@@ -36,7 +36,7 @@ export default function Contact({
 				</h2>
 				<section className={styles.blog_posts}>
 					{ allPostsData.map(({id, date, title, post_description})=>(
-						<PostCard key={id} title={title} date={date} post_description={post_description} id={id}/>
+						<PostCard key={id} title={title} date={date} post_description={post_description} id={id} redirectTo={'blog'}/>
 					)) }
        			</section>
 			</main>
