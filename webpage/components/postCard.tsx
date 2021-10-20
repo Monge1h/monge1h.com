@@ -6,10 +6,11 @@ export default function PostCard(data:
         title:string, 
         date:string ,
         post_description:string,
-        id: string
+        id: string,
+        redirectTo: string
     }){
 	return (
-          <Link href={`/blog/${data.id}`}><a>
+          <Link href={`/${data.redirectTo}/${data.id}`}><a>
                <article className={styles.card_post}>
                    <div className={styles.img_card_container}>
                         <img  src="/images/alien.gif" alt="hotdog"/>
