@@ -1,5 +1,6 @@
 
-import Layout from '../../components/layout'
+import Layout, {siteTitle} from '../../components/layout'
+import Head from 'next/head'
 import Image from 'next/image'
 import styles from  '../../styles/Posts.module.css'
 import { getAllPostIds , getPostData} from '../../lib/posts'
@@ -15,7 +16,9 @@ export default function Post({postData}:{
 }) {
   return (
     <Layout>
-
+			<Head>
+				<title>{siteTitle} | {postData.title}</title>
+			</Head>
    <main className={styles.post_container}>
         <h2 className={styles.post_container__title}>{postData.title}</h2>
         <div className={styles.post_container_imgcont}>
