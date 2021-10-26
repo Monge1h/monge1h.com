@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Head from 'next/head'
 import Link from 'next/link'
 import styles from '../styles/404.module.css'
 
@@ -10,6 +11,9 @@ function returnPath():string{
 export default function Custom404(){
 	return (
 		<div className={styles.container}>
+			<Head>
+				<title>{"Jorge Monge"} | 404</title>
+			</Head>
 			<h1 className={styles.title_post}>404!</h1>
 			<Image src={returnPath()} width='360' height='300'/>
 			<p className={styles.text}>I don&apos;t know what you&apos;re looking for,
