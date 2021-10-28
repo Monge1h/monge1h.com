@@ -6,6 +6,7 @@ export default function PostCard(data:
         title:string, 
         date:string ,
         post_description:string,
+        post_image_header:string,
         id: string,
         redirectTo: string
     }){
@@ -13,7 +14,7 @@ export default function PostCard(data:
           <Link href={`/${data.redirectTo}/${data.id}`}><a>
                <article className={styles.card_post}>
                    <div className={styles.img_card_container}>
-                        <img  src="/images/alien.gif" alt="hotdog"/>
+                        <img  src={data.post_image_header} alt="hotdog"/>
                     </div>
                     <div className={styles.post_card__content}>
                         <div className={styles.post_card__content__title}>

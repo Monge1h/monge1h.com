@@ -30,7 +30,7 @@ export function getSortedPostsData(posts:boolean) {
     // Combine the data with the id
     return {
       id,
-      ...(matterResult.data as {date: string; title: string, post_description:string})
+      ...(matterResult.data as {date: string; title: string, post_description:string, post_image_header: string})
     }
   })
   // Sort posts by date
