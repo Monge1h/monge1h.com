@@ -118,7 +118,7 @@
 }
 
 #active{
-    color:#8dc425
+    color:var(--kiwi-color)
 }
 
 
