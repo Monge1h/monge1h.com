@@ -1,8 +1,7 @@
 ---
-title: 'Two Forms of Pre-rendering'
+title: 'Aprendiendo JS con NodeSchool'
 date: '2020-01-01'
-post_description: 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..
-Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..'
+post_description: 'Conoces que es NodeSchool? no? deja te explico como puedes aprender JS usando los CLI de NodeSchool'
 ---
 # Aprendiendo JS con NodeSchool
 
@@ -19,10 +18,10 @@ NodeSchool mantiene diferentes **workshoppers** desde para aprender **JavaScript
 En este articulo vamos a usar el workshoppers de *javascripting,* este es perfecto si estamos iniciando en programación, asi que vamos a instalar este **workshoppers**, para eso vamos a usar npm y vamos a ejecutar el siguente comando.
 
 ```jsx
+// El flag -g es para que instarlo de manera global y poder llamarlo desde la consola!
  npm install -g javascripting
 ```
 
-// El flag -g es para que instarlo de manera global y poder llamarlo desde la consola!
 
 Una vez instalado lo podemos llamar desde nuestra consola! 😉
 
