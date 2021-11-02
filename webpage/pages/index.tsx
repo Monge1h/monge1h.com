@@ -13,7 +13,7 @@ const Home: NextPage = () => {
         <meta property="og:title" content="Jorge Monge" />
         <meta
           property="og:description"
-          content="I created things for Internet, and I love to drink water"
+          content="I create things for Internet, and I love to drink water"
         />
         <meta
           property="og:image"
