@@ -2,6 +2,7 @@
 title: 'Aprendiendo JS con NodeSchool'
 date: '2020-01-01'
 post_description: 'Conoces que es NodeSchool? no? deja te explico como puedes aprender JS usando los CLI de NodeSchool'
+post_image_header: '/blogs/nodeschool/nodeschool.png'
 ---
 # Aprendiendo JS con NodeSchool
 
