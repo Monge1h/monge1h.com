@@ -13,6 +13,8 @@ export default function Post({postData}:{
 		title: string
 		date:string
 		id:string,
+		post_image_header:string,
+		post_image_alt:string,
     contentHtml:string,
     markdown:string,
 	}
@@ -24,10 +26,11 @@ export default function Post({postData}:{
 				<title>{siteTitle} | {postData.title}</title>
 			</Head>
    <main className={styles.post_container}>
-        <h2 className={styles.post_container__title}>{postData.title}</h2>
+     <div className={styles.post_container_padding}>
         <div className={styles.post_container_imgcont}>
-            <Image className={styles.post_container_imgcont__img} height={500} width={1120} src="/images/alien.gif" alt="alien gif" />
+            <Image className={styles.post_container_imgcont__img} height={500} width={1120} src={postData.post_image_header} alt={postData.post_image_alt} />
         </div>
+     </div>
         <p className={styles.post_container__content}>
           <ReactMarkdown components={{
           code({node, inline, className, children, ...props}) {
