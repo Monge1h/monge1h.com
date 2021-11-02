@@ -52,7 +52,15 @@ export default function Post({postData}:{
           }}>{ postData.markdown}</ReactMarkdown>
         </p>
 
+        <div className={styles.footer_blog}>
         <time className={`${styles.post_card__content__date} ${styles.post_date}`}>{postData.date}</time>
+          <a target="_blank"
+              href={`http://twitter.com/share?text=${postData.title}&url=https://monge1h.com/projects/${postData.id}&via=monge1h`}
+              className={`${styles.post_card__content__date} ${styles.post_date} link`} rel="noreferrer"
+            >
+              Share on Twitter
+            </a>{' '}
+        </div>
    </main>
     </Layout>
   )

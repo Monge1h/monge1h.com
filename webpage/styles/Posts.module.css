@@ -48,6 +48,10 @@
 .post_date{
     padding-bottom: 70px;
 }
+.footer_blog{
+    display: flex;
+    justify-content: space-between;
+}
 /* tablet */
 @media (min-width: 768px) {
 
