@@ -10,6 +10,15 @@ const Home: NextPage = () => {
     <Layout>
       <Head>
         <title>{siteTitle}</title>
+        <meta property="og:title" content="Jorge Monge" />
+        <meta
+          property="og:description"
+          content="I created things for Internet, and I love to drink water"
+        />
+        <meta
+          property="og:image"
+          content="https://monge1h.com/images/Monge.jpg"
+        />
       </Head>
         {/* <main className="about-container"> */}
         <main className={styles.main_container}>
