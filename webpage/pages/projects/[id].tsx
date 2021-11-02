@@ -15,6 +15,7 @@ export default function Post({postData}:{
 		date:string
 		id:string,
 		post_image_header:string,
+		post_description:string,
 		post_image_alt:string,
     contentHtml:string,
     markdown:string
@@ -24,6 +25,20 @@ export default function Post({postData}:{
     <Layout>
 			<Head>
 				<title>{siteTitle} | {postData.title}</title>
+        <meta property="og:title" content={postData.title} />
+        <meta
+          property="og:description"
+          content={postData.post_description}
+        />
+        <meta
+          property="og:image"
+          content={`https://monge1h.com/${postData.post_image_header}`}
+        />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@Monge1h" />
+        <meta name="twitter:title" content={postData.title} />
+        <meta name="twitter:description" content={postData.post_description} />
+        <meta name="twitter:image" content={`https://monge1h.com/${postData.post_image_header}`}/>
 			</Head>
    <main className={styles.post_container}>
      <div className={styles.post_container_padding}>
