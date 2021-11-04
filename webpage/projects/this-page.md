@@ -3,6 +3,7 @@ title: 'This Website'
 date: '2021-11-02'
 post_description: 'Personal Website usando Next Js'
 post_image_header: '/projects/this-page/monge1h.gif'
+og_image: '/projects/this-page/og.png'
 post_image_alt: 'gif of this website'
 ---
 # This page!
