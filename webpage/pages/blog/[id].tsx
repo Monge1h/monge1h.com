@@ -26,6 +26,7 @@ export default function Post({postData}:{
 
 			<Head>
 				<title>{siteTitle} | {postData.title}</title>
+        <meta name="description" content={postData.post_description} />
         <meta property="og:title" content={postData.title} />
         <meta
           property="og:description"
