@@ -10,6 +10,9 @@ const Home: NextPage = () => {
     <Layout>
       <Head>
         <title>{siteTitle}</title>
+        <meta name="description" content="Jorge Monge homepage" />
+        <meta name="author" content="Jorge Monge" />
+        <meta name="author" content="monge1h" />
         <meta property="og:title" content="Jorge Monge" />
         <meta
           property="og:description"
@@ -17,8 +20,12 @@ const Home: NextPage = () => {
         />
         <meta
           property="og:image"
-          content="https://monge1h.com/images/Monge.jpg"
+          content="/images/og.png"
         />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@monge1h" />
+        <meta name="twitter:creator" content="@monge1h" />
+        <meta name="twitter:image" content="/images/og.png" />
       </Head>
         {/* <main className="about-container"> */}
         <main className={styles.main_container}>
