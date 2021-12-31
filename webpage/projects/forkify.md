@@ -10,8 +10,7 @@ post_image_alt: 'gif of the project'
 
 ### Live demo:
 
-- [https://forkify.monge1h.com](https://forkify.monge1h.com)
-
+- [https://forkify.monge1h.com](https://forkify.monge1h.com) [pendiente de aprobacion de extension de [quota](https://developer.spotify.com/community/news/2021/05/27/improving-the-developer-and-user-experience-for-third-party-apps/)]
 ### Repository:
 
 - [GitHub <-- link](https://github.com/Monge1h/forkify)
