@@ -40,7 +40,7 @@ export default function Post({postData}:{
         <meta name="twitter:site" content="@Monge1h" />
         <meta name="twitter:title" content={postData.title} />
         <meta name="twitter:description" content={postData.post_description} />
-        <meta name="twitter:image" content={postData.og_image}/>
+        <meta name="twitter:image:src" content={postData.og_image}/>
 			</Head>
    <main className={styles.post_container}>
      <div className={styles.post_container_padding}>
