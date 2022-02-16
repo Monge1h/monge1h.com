@@ -34,13 +34,13 @@ export default function Post({postData}:{
         />
         <meta
           property="og:image"
-          content={postData.og_image}
+          content={`https://monge1h.com${postData.og_image}`}
         />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@Monge1h" />
         <meta name="twitter:title" content={postData.title} />
         <meta name="twitter:description" content={postData.post_description} />
-        <meta name="twitter:image:src" content={postData.og_image}/>
+        <meta name="twitter:image:src" content={`https://monge1h.com${postData.og_image}`}/>
 			</Head>
    <main className={styles.post_container}>
      <div className={styles.post_container_padding}>
