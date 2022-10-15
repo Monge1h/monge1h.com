@@ -5,6 +5,7 @@ import Document, {
 	NextScript,
 	DocumentContext,
 } from "next/document";
+import Script from 'next/script';
 
 class MyDocument extends Document {
 	static async getInitialProps(ctx: DocumentContext) {
@@ -16,12 +17,19 @@ class MyDocument extends Document {
 		return (
 			<Html>
 				<Head>
-					<script
-						async
-						defer
-						data-website-id="efc3aebc-bccc-4cff-be8c-374d0f4c5f09"
-						src="https://analytics.monge1h.com/umami.js"
-					></script>
+  {/* Global Site Tag (gtag.js) - Google Analytics */}
+                      <Script strategy="lazyOnload" src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`} />
+
+            <Script strategy="lazyOnload">
+                {`
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){dataLayer.push(arguments);}
+                    gtag('js', new Date());
+                    gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}', {
+                    page_path: window.location.pathname,
+                    });
+                `}
+            </Script>
 				</Head>
 
 				<body>
