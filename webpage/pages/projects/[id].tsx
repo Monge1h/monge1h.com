@@ -8,6 +8,7 @@ import ReactMarkdown from 'react-markdown'
 import styles from  '../../styles/Posts.module.css'
 import { getAllPostIds , getPostData} from '../../lib/posts'
 import { GetStaticProps, GetStaticPaths } from 'next'
+import Kofi from '../../components/kofiWidget'
 
 export default function Post({postData}:{
 	postData: {
@@ -78,6 +79,7 @@ export default function Post({postData}:{
               Share on Twitter
             </a>{' '}
         </div>
+        <Kofi/>
    </main>
     </Layout>
   )

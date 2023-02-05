@@ -7,7 +7,7 @@ import styles from  '../../styles/Posts.module.css'
 import ReactMarkdown from 'react-markdown'
 import { getAllPostIds , getPostData} from '../../lib/posts'
 import { GetStaticProps, GetStaticPaths } from 'next'
-
+import Kofi from '../../components/kofiWidget'
 export default function Post({postData}:{
 	postData: {
 		title: string
@@ -41,6 +41,7 @@ export default function Post({postData}:{
         <meta name="twitter:title" content={postData.title} />
         <meta name="twitter:description" content={postData.post_description} />
         <meta name="twitter:image:src" content={`https://monge1h.com${postData.og_image}`}/>
+        
 			</Head>
    <main className={styles.post_container}>
      <div className={styles.post_container_padding}>
@@ -77,6 +78,7 @@ export default function Post({postData}:{
               Share on Twitter
             </a>{' '}
         </div>
+        <Kofi/>
    </main>
     </Layout>
   )
