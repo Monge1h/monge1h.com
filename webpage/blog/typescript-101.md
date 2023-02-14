@@ -162,7 +162,9 @@ Si te fijas en este caso ademas de `express` estamos importando `{ Request, Resp
 
 Por ejemplo:
 
-— Poner ejemplo e JavaScript y TypeScript, que en TypeScript nos da autocompletado
+![stringTs.gif](/blogs/typescript-101/express.gif)
+
+En este caso tenemos un server que lo estamos escribiendo con Ts y otro con Js, si te fijas en la version de Ts nos indica que `"enviar"` no es una propiedad de Response
 
 ### 4. Correr con TypeScript
 
