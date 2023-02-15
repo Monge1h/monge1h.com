@@ -164,7 +164,7 @@ Por ejemplo:
 
 ![stringTs.gif](/blogs/typescript-101/express.gif)
 
-En este caso tenemos un server que lo estamos escribiendo con Ts y otro con Js, si te fijas en la version de Ts nos indica que `"enviar"` no es una propiedad de Response
+En este caso tenemos un server que lo estamos escribiendo con Ts y otro con Js, si te fijas en la versión de Ts nos indica que `"enviar"` no es una propiedad de Response y nos marca un error, eso es algo que no sucede en la versión de Js. 🤯
 
 ### 4. Correr con TypeScript
 
