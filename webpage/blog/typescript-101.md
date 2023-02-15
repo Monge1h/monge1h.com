@@ -1,7 +1,7 @@
 ---
 title: 'TypeScript 101'
 date: '2023-02-12'
-post_description: 'En este blog te hablare sobre TypeScript, el lenguaje de programación de tipos de código abierto. Aprende las bases, explora el ecosistema y descubre cómo utilizar TypeScript con librerías de JavaScript. ¡Hazte con el control de TypeScript con este blog!'
+post_description: 'En este blog te hablare sobre TypeScript, el superset de JavaScript. Aprende las bases, explora el ecosistema y descubre cómo utilizar TypeScript con librerías de JavaScript. ¡Hazte con el control de TypeScript con este blog!'
 post_image_header: '/blogs/typescript-101/typescript.jpg'
 og_image: '/blogs/typescript-101/og.png'
 post_image_alt: 'typescript logo'
