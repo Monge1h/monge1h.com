@@ -179,7 +179,7 @@ Ya que estamos usando Node js necesitamos compilar nuestro código a JavaScript,
 ```jsx
 {
   "scripts": {
-    "build": "tsc"
+    "build": "npx tsc"
   }
 }
 ```
@@ -189,7 +189,7 @@ Con eso hacemos que se lea la configuración que escribimos en `tsconfig.json` y
 simplemente con un 
 
 ```bash
-node dist/index.js
+node dist/app.js
 ```
 
 Lo puedes correr en puro Js 🚀
