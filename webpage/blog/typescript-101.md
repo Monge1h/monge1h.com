@@ -11,7 +11,7 @@ post_image_alt: 'typescript logo'
 
 Hey, entraste al blog que genial!
 
-Estoy seguro que ya sabes que es TypeScript o por lo menos alguna vez haz escuchado hablar de el, yo también había escuchado hablar de ello; y mucho, pero no tenia claro algunos conceptos, así que escribiré el blog que me hubiera gustado sobre las cosas básicas de TypeScript, así que como dijo un sabio `iniciemos por el principio!` 
+Estoy seguro que ya sabes que es TypeScript o por lo menos alguna vez haz escuchado hablar de este lenguage, yo también había escuchado hablar de ello; y mucho, pero no tenia claro algunos conceptos, así que escribiré el blog que me hubiera gustado sobre las cosas básicas de TypeScript, así que como dijo un sabio `iniciemos por el principio!` 
 
 TypeScript en simples palabras es una versión mejorada y más avanzada de JavaScript, esto es porque es un `superset` de JavaScript, ya que le agrega características adicionales algunas de ellas son:
 
