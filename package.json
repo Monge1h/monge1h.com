@@ -21,6 +21,9 @@
     "remark": "^13.0.0",
     "remark-html": "^13.0.2"
   },
+  "engines": {
+    "node": "18.x"
+  },
   "devDependencies": {
     "@types/node": "18.11.0",
     "@types/react": "17.0.27",
