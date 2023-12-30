@@ -11,12 +11,12 @@
   "dependencies": {
     "@bradgarropy/next-google-analytics": "^1.0.2",
     "gray-matter": "^4.0.3",
-    "next": "^12.1.4",
+    "next": "^14.0.4",
     "raw-body": "^2.5.1",
     "raw-loader": "^4.0.2",
-    "react": "17.0.2",
-    "react-dom": "17.0.2",
-    "react-markdown": "^7.1.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-markdown": "^9.0.1",
     "react-syntax-highlighter": "^15.4.4",
     "remark": "^13.0.0",
     "remark-html": "^13.0.2"
@@ -26,10 +26,10 @@
   },
   "devDependencies": {
     "@types/node": "18.11.0",
-    "@types/react": "17.0.27",
+    "@types/react": "18.2.0",
     "@types/react-syntax-highlighter": "^13.5.2",
     "eslint": "7.32.0",
-    "eslint-config-next": "11.1.2",
-    "typescript": "4.4.3"
+    "eslint-config-next": "^14.0.4",
+    "typescript": "4.5.2"
   }
 }

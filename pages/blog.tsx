@@ -29,7 +29,7 @@ export default function Contact({
 	return (
 		<Layout>
 			<Head>
-				<title>{siteTitle} | Blog</title>
+				<title>{`${siteTitle} | Blog`}</title>
 			</Head>
 
 			<main className={`${styles.main_container_blog_posts}`}>

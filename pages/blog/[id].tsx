@@ -25,7 +25,7 @@ export default function Post({postData}:{
     <Layout>
 
 			<Head>
-				<title>{siteTitle} | {postData.title}</title>
+				<title>{`${siteTitle} | ${postData.title}`}</title>
         <meta name="description" content={postData.post_description} />
         <meta property="og:title" content={postData.title} />
         <meta
@@ -49,11 +49,11 @@ export default function Post({postData}:{
             <Image className={styles.post_container_imgcont__img} height={500} width={1120} src={postData.post_image_header} alt={postData.post_image_alt} />
         </div>
      </div>
-        <p className={styles.post_container__content}>
+        <article className={styles.post_container__content}>
           <ReactMarkdown components={{
-          code({node, inline, className, children, ...props}) {
+          code({node,  className, children, ...props}) {
             const match = /language-(\w+)/.exec(className || '')
-            return !inline && match ? (
+            return  match ? (
             <SyntaxHighlighter 
               style={nord} 
               language={match[1]} 
@@ -68,7 +68,7 @@ export default function Post({postData}:{
             )
           }
           }}>{ postData.markdown}</ReactMarkdown>
-        </p>
+        </article>
         <div className={styles.footer_blog}>
         <time className={`${styles.post_card__content__date} ${styles.post_date}`}>{postData.date}</time>
           <a target="_blank"

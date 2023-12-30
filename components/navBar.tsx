@@ -11,13 +11,13 @@ export default function NavBar(){
     const toggleMenu = () => setSideBar(!sideBar)
 	return (
 <nav className={styles.navContainer}>
-          <Link href="/"><a><h1 className={styles.h1}>Jorge Monge</h1></a></Link> 
+          <Link href="/"><h1 className={styles.h1}>Jorge Monge</h1></Link> 
             <section id={styles.menu_bar}>
                 <ul className={`${styles.nav} ${sideBar? styles.change : ""}`}>
-                    <li><Link href="/"><a id={path.route == "/" ? styles.active:""}>ABOUT</a></Link></li>
-                    <li><Link href="/blog"><a id={path.route.includes("/blog") ? styles.active:""}>BLOG</a></Link></li>
-                    <li><Link href="/projects" ><a id={path.route.includes("/projects") ? styles.active:""}>PROJECTS</a></Link></li>
-                    <li><Link href="/contact"><a id={path.route == "/contact" ? styles.active:""}>CONTACT</a></Link></li>
+                    <li><Link href="/" id={path.route == "/" ? styles.active:""}>ABOUT</Link></li>
+                    <li><Link href="/blog" id={path.route.includes("/blog") ? styles.active:""}>BLOG</Link></li>
+                    <li><Link href="/projects" id={path.route.includes("/projects") ? styles.active:""}>PROJECTS</Link></li>
+                    <li><Link href="/contact" id={path.route == "/contact" ? styles.active:""}>CONTACT</Link></li>
                 </ul>
                 <div className={`${styles.menu_bg} ${sideBar ? styles.change_bg :''}`} id={styles.menu_bg_id} ></div>
             </section>

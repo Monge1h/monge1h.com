@@ -12,14 +12,14 @@ export default function Custom404(){
 	return (
 		<div className={styles.container}>
 			<Head>
-				<title>{"Jorge Monge"} | 404</title>
+				<title>{`Jorge Monge | 404`}</title>
 			</Head>
 			<h1 className={styles.title_post}>404!</h1>
-			<Image src={returnPath()} width='360' height='300'/>
+			<Image src={returnPath()} width='360' height='300' alt='Image of water'/>
 			<p className={styles.text}>I don&apos;t know what you&apos;re looking for,
 				but drink some water!
 			</p>
-			<Link href={'/'}><a className={`link ${styles.return_home}`}>Return Home</a></Link>
+			<Link href={'/'} className={`link ${styles.return_home}`}>Return Home</Link>
 		</div>
 	)
 }

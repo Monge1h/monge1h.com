@@ -5,7 +5,7 @@ export default function Contact(){
 	return (
 		<Layout>
 			<Head>
-				<title>{siteTitle} | Contact</title>
+				<title>{`${siteTitle} | Contact`}</title>
 			</Head>
 
 			<main className={`${styles.about_container} ${styles.contact_container}`}>
