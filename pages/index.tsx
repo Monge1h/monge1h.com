@@ -34,11 +34,11 @@ const Home: NextPage = () => {
           </div>
           <section className={styles.text_container}>
             <div className={styles.text_description}>
-            <p>Hi, I&apos;m a <a className="linkedin-a link" target="_blank" href="https://www.linkedin.com/in/monge1h/" rel="noreferrer">Jorge.</a> 🥝<br/>
-        I’m a developer, I love to do cool <Link href="/projects"><a className="this-website-a link" >projects</a></Link> and 
-        <Link href="/blog"><a className="this-website-a link"> writing</a></Link> about them,I also create{" "}
-        <a className="yt-a link" target="_blank" href="https://www.youtube.com/monge1h" rel="noreferrer">YouTube videos</a> about tech things and I love to listen
-        to <a target="_blank" className="spotify-a link" href="https://open.spotify.com/user/12125703988?si=a265bf6ed44d4c9c" rel="noreferrer">music!</a></p>
+            <p>Hi, I&apos;m a <Link className="linkedin-a link" target="_blank" href="https://www.linkedin.com/in/monge1h/" rel="noreferrer">Jorge.</Link> 🥝<br/>
+        I’m a developer, I love to do cool <Link href="/projects" className="this-website-a link">projects</Link> and 
+        <Link href="/blog" className="this-website-a link">writing</Link> about them,I also create{" "}
+        <Link className="yt-a link" target="_blank" href="https://www.youtube.com/monge1h" rel="noreferrer">YouTube videos</Link> about tech things and I love to listen
+        to <Link target="_blank" className="spotify-a link" href="https://open.spotify.com/user/12125703988?si=a265bf6ed44d4c9c" rel="noreferrer">music!</Link></p>
             </div>
           </section>
       </main>

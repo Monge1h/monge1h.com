@@ -19,7 +19,7 @@ export default function Custom404(){
 			<p className={styles.text}>I don&apos;t know what you&apos;re looking for,
 				but drink some water!
 			</p>
-			<Link href={'/'}><a className={`link ${styles.return_home}`}>Return Home</a></Link>
+			<Link href={'/'} className={`link ${styles.return_home}`}>Return Home</Link>
 		</div>
 	)
 }
