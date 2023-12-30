@@ -51,9 +51,9 @@ export default function Post({postData}:{
      </div>
         <article className={styles.post_container__content}>
           <ReactMarkdown components={{
-          code({node, inline, className, children, ...props}) {
+          code({node,  className, children, ...props}) {
             const match = /language-(\w+)/.exec(className || '')
-            return !inline && match ? (
+            return  match ? (
             <SyntaxHighlighter 
               style={nord} 
               language={match[1]} 
