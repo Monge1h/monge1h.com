@@ -15,7 +15,7 @@ export default function Custom404(){
 				<title>{`Jorge Monge | 404`}</title>
 			</Head>
 			<h1 className={styles.title_post}>404!</h1>
-			<Image src={returnPath()} width='360' height='300'/>
+			<Image src={returnPath()} width='360' height='300' alt='Image of water'/>
 			<p className={styles.text}>I don&apos;t know what you&apos;re looking for,
 				but drink some water!
 			</p>
