@@ -12,7 +12,7 @@ export default function Custom404(){
 	return (
 		<div className={styles.container}>
 			<Head>
-				<title>{"Jorge Monge"} | 404</title>
+				<title>{`Jorge Monge | 404`}</title>
 			</Head>
 			<h1 className={styles.title_post}>404!</h1>
 			<Image src={returnPath()} width='360' height='300'/>

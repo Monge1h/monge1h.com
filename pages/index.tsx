@@ -9,7 +9,7 @@ const Home: NextPage = () => {
   return (
     <Layout>
       <Head>
-        <title>{siteTitle}</title>
+        <title>{`${siteTitle}`}</title>
         <meta name="description" content="Jorge Monge homepage" />
         <meta name="author" content="Jorge Monge" />
         <meta name="author" content="monge1h" />
