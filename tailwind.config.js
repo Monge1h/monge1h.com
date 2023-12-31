@@ -14,5 +14,8 @@ module.exports = {
   prefix: 'tw-',
   important: true,
   plugins: [],
+  corePlugins:{
+    preflight: false,
+  }
 }
 
