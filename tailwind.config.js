@@ -11,6 +11,8 @@ module.exports = {
   theme: {
     extend: {},
   },
+  prefix: 'tw-',
+  important: true,
   plugins: [],
 }
 
