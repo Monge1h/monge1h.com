@@ -6,6 +6,7 @@
    justify-content: center;
    height: 59px;
    text-align: center;
+   align-items: baseline;
 }
 .h1{
    font-size: 2.4rem;
