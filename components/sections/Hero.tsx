@@ -2,10 +2,12 @@ import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import styles from '../../styles/Home.module.css'
+import Scrolldown from '../scrolldown'
 
 function Hero() {
   return (
-    <main className={`${styles.main_container} tw-h-screen`}>
+    <>
+    <main className={`${styles.main_container} md:tw-h-[80vh] tw-h-[95-vh]`}>
       <div className={styles.img_container}>
         <Image className={styles.img_profile} src="/images/Monge.jpg" alt="Profile Photo" height={181} width={176} />
       </div>
@@ -16,8 +18,6 @@ function Hero() {
           <p> I also enjoy <Link href="/projects" className="tw-text-kiwi link">writing</Link> about my projects and actively creating new <Link href="/projects" className="this-website-a link">projects</Link>.</p>
 
          </div>
-
-
 
         <div className='tw-flex tw-justify-around'>
           {/* github */}
@@ -61,6 +61,8 @@ function Hero() {
         </div>
       </section>
     </main>
+  <Scrolldown />
+   </> 
   )
 }
 
