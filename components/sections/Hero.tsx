@@ -10,13 +10,12 @@ function Hero() {
         <Image className={styles.img_profile} src="/images/Monge.jpg" alt="Profile Photo" height={181} width={176} />
       </div>
       <section className={styles.text_container}>
-        <div className={styles.text_description}>
-          <p>Hi, I&apos;m a <Link className="linkedin-a link" target="_blank" href="https://www.linkedin.com/in/monge1h/" rel="noreferrer">Jorge.</Link> 🥝<br />
-            I’m a developer, I love to do cool <Link href="/projects" className="this-website-a link">projects</Link> and
-            <Link href="/blog" className="this-website-a link">writing</Link> about them,I also create{" "}
-            <Link className="yt-a link" target="_blank" href="https://www.youtube.com/monge1h" rel="noreferrer">YouTube videos</Link> about tech things and I love to listen
-            to <Link target="_blank" className="spotify-a link" href="https://open.spotify.com/user/12125703988?si=a265bf6ed44d4c9c" rel="noreferrer">music!</Link></p>
-        </div>
+        <div className={styles.text_description} >
+        <p>I&apos;m <Link className="linkedin-a link" target="_blank" href="https://www.linkedin.com/in/monge1h/" rel="noreferrer">Jorge Monge</Link> 🥝, a software engineer.</p>
+          <p>I specialize in bringing ideas to life, taking them from concept to production with real <Link href="/projects" className="spotify-a link">products</Link>.</p>
+          <p> I also enjoy <Link href="/projects" className="tw-text-kiwi link">writing</Link> about my projects and actively creating new <Link href="/projects" className="this-website-a link">projects</Link>.</p>
+
+         </div>
 
 
 
