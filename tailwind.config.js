@@ -9,7 +9,15 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors:{
+        kiwi:{
+          DEFAULT: '#8dc63f',
+          dark: '#7cb82f',
+          light: '#b2d235',
+        },
+      }
+    },
   },
   prefix: 'tw-',
   important: true,
