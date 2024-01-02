@@ -5,6 +5,7 @@ import Hero from '../components/sections/Hero'
 import Expertice from '../components/sections/Expertice'
 import FeaturedProject from '../components/sections/FeaturedProject'
 import Projects from '../components/sections/Projects'
+import Footer from '../components/sections/Footer'
 
 const Home: NextPage = () => {
   return (
@@ -34,6 +35,7 @@ const Home: NextPage = () => {
       <Expertice/>
       <FeaturedProject/>
       <Projects/>
+      <Footer/>
     </Layout>
   )
 }
