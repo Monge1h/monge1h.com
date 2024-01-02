@@ -1,27 +1,20 @@
 export default function Timeline() {
 	return (
-		<div className="tw-mx-auto tw-w-full tw-h-full">
-			<div className="tw-relative tw-wrap tw-overflow-hidden tw-p-10 tw-h-full">
-				<div
-					className="tw-border-2-2 tw-absolute tw-border-opacity-20 tw-border-gray-700 tw-h-full tw-border md:block hidden"
-					style={{ left: "50%" }}
-				></div>
-				{/* right timeline */}
-				<div className="tw-mb-8 tw-flex tw-justify-between tw-items-center tw-w-full">
-					<div className="tw-order-1 tw-w-5/12 md:tw-block hidden"></div>
-					<div className="tw-z-20 tw-flex tw-items-center tw-order-1 tw-bg-gray-800 tw-shadow-xl tw-w-8 tw-h-8 tw-rounded-full">
-						<h1 className="tw-mx-auto tw-font-semibold tw-text-lg tw-text-white md:block hidden">
-							💙
-						</h1>
-					</div>
-
-					<div className="tw-order-1 tw-bg-[#0084FF] tw-shadow-xl tw-w-full md:tw-w-5/12 tw-px-6 tw-py-4">
+		<div className=" tw-mx-auto tw-w-full tw-grid tw-grid-cols-9 tw-px-2">
+			<div className={`md:tw-col-span-4 tw-col-span-9 tw-mx-4`}>
+				<div className="tw-mb-8 md:tw-flex  tw-justify-between tw-flex-row-reverse tw-items-center tw-w-full">
+					<div className="tw-order-1 tw-bg-[#0084FF] tw-shadow-xl tw-w-full  tw-px-6 tw-py-4">
 						<h3 className="tw-mb-3 tw-font-bold tw-text-white tw-text-4xl">
 							Software Engineer
 						</h3>
 						<p className="tw-text-3xl tw-leading-snug tw-tracking-wide tw-text-gray-200 tw-text-opacity-100">
-							Terapify · Full-time · May 2022 - Oct 2023 . 1 year 6 months
+							Terapify · Full-time
+							<span className="tw-text-lg tw-leading-snug  tw-text-gray-100 tw-text-opacity-100 sm:tw-block md:tw-hidden">
+								<br />
+								· May 2022 - Oct 2023 . 1 year 6 months
+							</span>
 						</p>
+
 						<p className="tw-text-2xl tw-leading-snug tw-tracking-wide tw-text-gray-200 tw-text-opacity-100">
 							📍 Remote
 						</p>
@@ -43,8 +36,8 @@ export default function Timeline() {
 							backend logic.
 						</p>
 						<p className="tw-text-xl tw-leading-snug tw-tracking-wide tw-text-yellow-200 tw-text-opacity-100">
-							Skills: Amazon Web Services (AWS) · Docker · Inglés · React.js ·
-							Amazon Web Services (AWS) · MongoDB · Node.js · Express.js
+							Skills: Node Js · Express.js · MongoDB · Next js ·
+							Amazon Web Services (AWS) · Docker
 						</p>
 
 						<button className="tw-bg-blue-500 tw-text-white tw-font-bold tw-py-2 tw-px-4 tw-rounded-full tw-mt-4 hover:tw-bg-blue-700">
@@ -52,22 +45,36 @@ export default function Timeline() {
 						</button>
 					</div>
 				</div>
-				{/* left timeline */}
-				<div className="tw-mb-8 tw-flex tw-justify-between tw-flex-row-reverse tw-items-center tw-w-full left-timeline">
-					<div className="tw-order-1 tw-w-5/12"></div>
-					<div className="tw-z-20 tw-flex tw-items-center tw-order-1 tw-bg-gray-800 tw-shadow-xl tw-w-8 tw-h-8 tw-rounded-full">
-						<h1 className="tw-mx-auto tw-text-white tw-font-semibold tw-text-lg">
-							👨🏽‍⚕️
-						</h1>
-					</div>
+			</div>
+			<div className="tw-relative tw-col-span-1 tw-w-full tw-h-full md:tw-flex tw-justify-center tw-items-center tw-hidden">
+				<div className="tw-h-full tw-w-1 tw-bg-indigo-300"></div>
+				<div className="tw-absolute tw-bg-indigo-400 tw-z-10 tw-text-white tw-text-lg tw-text-center tw-p-2">
+					May 2022 - Oct 2023 <br/>1 year 6 months
+				</div>
+			</div>
+			<div className="tw-col-span-4 tw-w-full "></div>
 
-					<div className="tw-order-1 tw-bg-[#6448d1] tw-shadow-xl tw-w-full md:tw-w-5/12 tw-px-6 tw-py-4">
+			{/* right */}
+			<div className="tw-col-span-4 tw-w-full"></div>
+			<div className="tw-relative tw-col-span-1 tw-w-full tw-h-full md:tw-flex tw-justify-center tw-items-center  tw-hidden ">
+				<div className="tw-h-full tw-w-1 tw-bg-indigo-300"></div>
+				<div className="tw-absolute tw-bg-indigo-400 tw-z-10 tw-text-white tw-text-lg tw-text-center tw-p-2">
+					Aug 2019 - May 2022 <br/>2 years 10 months
+				</div>
+			</div>
+			<div className="md:tw-col-span-4 tw-col-span-9 tw-mx-4 ">
+				{/* card */}
+				<div className="tw-mb-8 md:tw-flex tw-justify-between  tw-items-center tw-w-full ">
+					<div className="tw-order-1 tw-bg-[#6448d1] tw-shadow-xl tw-w-full  tw-px-6 tw-py-4">
 						<h3 className="tw-mb-3 tw-font-bold tw-text-white tw-text-4xl">
 							Back-end Developer
 						</h3>
 						<p className="tw-text-3xl tw-leading-snug tw-tracking-wide tw-text-gray-200 tw-text-opacity-100">
-							Hospital de Especialidades Nuestra Señora de La Paz · Aug 2019 -
-							May 2022 · 2 years 10 months
+							Hospital de Especialidades Nuestra Señora de La Paz
+							<span className="tw-text-lg tw-leading-snug  tw-text-gray-100 tw-text-opacity-100 sm:tw-block md:tw-hidden">
+								<br />
+								· Aug 2019 - May 2022 · 2 years 10 months
+							</span>
 						</p>
 						<p className="tw-text-2xl tw-leading-snug tw-tracking-wide tw-text-gray-200 tw-text-opacity-100">
 							📍 San Miguel, El Salvador · On-site
@@ -92,8 +99,10 @@ export default function Timeline() {
 						</p>
 					</div>
 				</div>
-				{/* ...rest of the timeline */}
+
+
 			</div>
+
 		</div>
 	);
 }
