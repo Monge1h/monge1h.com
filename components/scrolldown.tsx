@@ -2,7 +2,7 @@
 export default function Scrolldow() {
   return (
 <div className="tw-flex tw-justify-center tw-items-center md:tw-mt-0 sm:tw-mt-[20px]  ">
-      <a href="#content" className="tw-animate-bounce">
+      <div className="tw-animate-bounce">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -17,7 +17,7 @@ export default function Scrolldow() {
             d="M19 14l-7 7m0 0l-7-7m7 7V3"
           />
         </svg>
-      </a>
+      </div>
     </div>
 	
   );

@@ -15,7 +15,8 @@ function Hero() {
         <div className={styles.text_description} >
         <p>I&apos;m <Link className="linkedin-a link" target="_blank" href="https://www.linkedin.com/in/monge1h/" rel="noreferrer">Jorge Monge</Link> 🥝, a software engineer.</p>
           <p>I specialize in bringing ideas to life, taking them from concept to production with real <Link href="/projects" className="spotify-a link">products</Link>.</p>
-          <p> I also enjoy <Link href="/projects" className="tw-text-kiwi link">writing</Link> about my projects and actively creating new <Link href="/projects" className="this-website-a link">projects</Link>.</p>
+          <p> I also enjoy <Link href="/projects" className="tw-text-kiwi link">writing</Link> about my projects and actively creating new <Link href="/projects" className="this-website-a link">projects</Link>. 🚀</p>
+
 
          </div>
 
