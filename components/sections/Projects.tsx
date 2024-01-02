@@ -10,7 +10,7 @@ export default function Projects() {
 				<section className='tw-grid md:tw-grid-cols-3 tw-grid-cols-1  tw-container'>
 					<PostCard 
 						title='Socnare Pets: Tags with Superpowers in a Week' 
-						id='1' 
+						id='socnare-pets' 
 						date='2023-10-03' 
 						post_description='Socnare Pets project, tags with QR for pets that notify the owner. A project that was born from a personal concern and became an innovative solution.' 
 						post_image_alt='Socnare Pets logo' 
@@ -20,17 +20,17 @@ export default function Projects() {
 					/>
 					<PostCard 
 						title='🚧 sendthistomyfuture.me' 
-						id='2' 
+						id='sendthistomyfuture-me' 
 						date='2022-03-12' 
 						post_description='Sendthistomyfuture.me is a unique project that allows you to send a letter to your future self. Write down your current thoughts, aspirations, and hopes, and receive them in the future as a reminder of your past self.' 
 						post_image_alt='gif of this website' 
 						post_image_header='/projects/sendthistomyfuture_me/image.png' 
 						redirectTo='/projects' 
-						key='sendthistomyfuture_me'
+						key='sendthistomyfuture-me'
 					/>
 					<PostCard 
 						title='This Website' 
-						id='3' 
+						id='this-page' 
 						date='2021-11-02' 
 						post_description='This is my personal website built using Next.js. It serves as a portfolio to showcase my projects and skills. It also includes a blog where I share my thoughts on various topics related to web development and programming in general.' 
 						post_image_alt='gif of this website' 
