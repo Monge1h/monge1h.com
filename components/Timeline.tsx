@@ -40,9 +40,9 @@ export default function Timeline() {
 							Amazon Web Services (AWS) · Docker
 						</p>
 
-						<button className="tw-bg-blue-500 tw-text-white tw-font-bold tw-py-2 tw-px-4 tw-rounded-full tw-mt-4 hover:tw-bg-blue-700">
+						{/* <button className="tw-bg-blue-500 tw-text-white tw-font-bold tw-py-2 tw-px-4 tw-rounded-full tw-mt-4 hover:tw-bg-blue-700">
 							Read More
-						</button>
+						</button> */}
 					</div>
 				</div>
 			</div>
