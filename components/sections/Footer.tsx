@@ -1,6 +1,11 @@
-import React from 'react'
+import React, {useContext} from 'react'
+import Link from 'next/link'
+import { ViewCountContext } from '../../contexts/ViewsCountContext'
 
 export default function Footer() {
+
+	const {viewCount} = useContext(ViewCountContext);
+
 	return (
 		<footer className="tw-relative tw-bg-[#2A2529] tw-pt-8 tw-pb-6">
 			<div className="tw-container tw-mx-auto tw-px-4">
@@ -9,7 +14,7 @@ export default function Footer() {
 					<div className="tw-w-full tw-px-4 tw-text-center">
 						<h4 className="tw-text-7xl tw-font-semibold tw-text-white tw-my-1 ">Have something in mind?</h4>
 						<h5 className="tw-text-2xl  tw-mb-0 tw-text-white">
-							Reach me out on any of these platforms, I&apos;m just a message away on any of these platforms.
+							Reach me out on any of these platforms, I&apos;m just a message away.
 						</h5>
 						<div className='tw-flex tw-justify-center'>
 							{/* github */}
@@ -58,6 +63,22 @@ export default function Footer() {
 					<div className="tw-w-full md:tw-w-4/12 tw-px-4 tw-mx-auto tw-text-center">
 						<div className="tw-text-xl tw-text-white tw-font-semibold tw-py-1">
 							Jorge Monge
+						</div>
+						<div className="tw-text-md tw-text-white tw-mt-2">
+							{
+								viewCount !== undefined && (
+								<>
+									<p>You are visitor number: {viewCount}</p>
+									{/* <p className="tw-mt-2">
+									Curious about how this works? </p>
+									<p>
+									<Link href="/blog/cloud-resume-challenge" className="link tw-text-kiwi hover:tw-underline">
+										Read more about it in my blog!
+									</Link>
+									</p> */}
+								</>
+								)
+							}
 						</div>
 					</div>
 				</div>
