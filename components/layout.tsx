@@ -1,5 +1,8 @@
+import { Toaster } from 'sonner';
+
 import Head from 'next/head'
 import NavBar from './navBar'
+import ViewerCount from './viewerCount/ViewerCount';
 
 export const siteTitle = "Jorge Monge"
 
@@ -16,9 +19,12 @@ export default function Layout({children}:{
 				/>
 			</Head>
 			<header>
+				<ViewerCount/>
 				<NavBar/>
 			</header>
-			<main>{children}</main>
+			<main>
+				<Toaster/>
+				{children}</main>
 		</div>
 	)
 }
