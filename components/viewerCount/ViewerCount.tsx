@@ -14,7 +14,7 @@ function ViewerCount() {
 		const oneHourInMilliseconds = 60 * 60 * 1000;
 		const currentTime = Date.now();
 
-		const isOneHourPassed = true
+		const isOneHourPassed = Number(viewerCountDate) + oneHourInMilliseconds < currentTime;
 
 		if (!viewerCountDate || isOneHourPassed) {
 			fetch(
