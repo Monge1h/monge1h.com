@@ -1,6 +1,10 @@
-import React from 'react'
+import React, {useContext} from 'react'
+import { ViewCountContext } from '../../contexts/ViewsCountContext'
 
 export default function Footer() {
+
+	const {viewCount} = useContext(ViewCountContext);
+
 	return (
 		<footer className="tw-relative tw-bg-[#2A2529] tw-pt-8 tw-pb-6">
 			<div className="tw-container tw-mx-auto tw-px-4">
@@ -58,6 +62,11 @@ export default function Footer() {
 					<div className="tw-w-full md:tw-w-4/12 tw-px-4 tw-mx-auto tw-text-center">
 						<div className="tw-text-xl tw-text-white tw-font-semibold tw-py-1">
 							Jorge Monge
+						</div>
+						<div className="tw-text-md tw-text-white tw-mt-2">
+							{
+								viewCount !== undefined && `You are visitor number: ${viewCount}`
+							}
 						</div>
 					</div>
 				</div>
