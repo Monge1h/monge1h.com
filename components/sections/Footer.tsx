@@ -69,13 +69,13 @@ export default function Footer() {
 								viewCount !== undefined && (
 								<>
 									<p>You are visitor number: {viewCount}</p>
-									<p className="tw-mt-2">
+									{/* <p className="tw-mt-2">
 									Curious about how this works? </p>
 									<p>
 									<Link href="/blog/cloud-resume-challenge" className="link tw-text-kiwi hover:tw-underline">
 										Read more about it in my blog!
 									</Link>
-									</p>
+									</p> */}
 								</>
 								)
 							}
