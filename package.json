@@ -26,6 +26,7 @@
     "node": "18.x"
   },
   "devDependencies": {
+    "@playwright/test": "^1.41.2",
     "@types/node": "18.11.0",
     "@types/react": "18.2.0",
     "@types/react-syntax-highlighter": "^13.5.2",
