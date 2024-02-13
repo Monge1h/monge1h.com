@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "test:e2e": "playwright test"
   },
   "dependencies": {
     "@bradgarropy/next-google-analytics": "^1.0.2",
@@ -26,10 +27,12 @@
     "node": "18.x"
   },
   "devDependencies": {
+    "@playwright/test": "^1.41.2",
     "@types/node": "18.11.0",
     "@types/react": "18.2.0",
     "@types/react-syntax-highlighter": "^13.5.2",
     "autoprefixer": "^10.4.16",
+    "dotenv": "^16.4.3",
     "eslint": "7.32.0",
     "eslint-config-next": "^14.0.4",
     "postcss": "^8.4.32",

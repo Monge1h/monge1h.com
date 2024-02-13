@@ -68,7 +68,7 @@ export default function Footer() {
 							{
 								viewCount !== undefined && (
 								<>
-									<p>You are visitor number: {viewCount}</p>
+									<p id='visitorCountFooter'>You are visitor number: {viewCount}</p>
 									{/* <p className="tw-mt-2">
 									Curious about how this works? </p>
 									<p>
