@@ -5,29 +5,29 @@ on:
     branches:
       - main
 
+env:
+  NEXT_PUBLIC_VIEWS_API: ${{ secrets.NEXT_PUBLIC_VIEWS_API }}
+
 jobs:
   test:
+    timeout-minutes: 10
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [18.x]
     steps:
-    - uses: actions/checkout@v2
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v2
+    - uses: actions/checkout@v3
+    - name: Use Node.js 18
+      uses: actions/setup-node@v3
       with:
-        node-version: ${{ matrix.node-version }}
+        node-version: 18
     - name: Install dependencies
-      run: npm install
-    - name: Build Next.js application
-      run: npm run build
-    - name: Start Next.js application
-      run: npm start &
+      run: npm ci
+    - name: Install Playwright Browser
+      run: npx playwright install --with-deps
     - name: Run Playwright tests
       run: npx playwright test
     - name: Upload test results on failure
-      if: failure()
-      uses: actions/upload-artifact@v2
+      if: always()
+      uses: actions/upload-artifact@v3
       with:
-        name: playwright-test-results
-        path: tests-results/**/*
+        name: playwright-report
+        path: playwright-report
+        retention-days: 1
