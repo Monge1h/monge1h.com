@@ -87,7 +87,7 @@ test('API call is made if more than an hour has passed since last viewerCount', 
     expect(apiCalled).toBeTruthy();
 
     const updatedViewsInLocalStorage = await page.evaluate(() => localStorage.getItem('numberOfViews'));
-    expect(updatedViewsInLocalStorage).toBe('100');
+    expect(updatedViewsInLocalStorage).toBe('101');
 	await expect(page.locator('#visitorCountFooter')).toHaveText(/You are visitor number: 101/);
 });
 
