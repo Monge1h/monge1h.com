@@ -23,7 +23,6 @@ jobs:
       run: npm run build
     - name: Start Next.js application
       run: npm start &
-      background: true
     - name: Run Playwright tests
       run: npx playwright test
     - name: Upload test results on failure
