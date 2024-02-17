@@ -34,3 +34,12 @@ yarn-error.log*
 
 # vercel
 .vercel
+
+# infra
+**/.terraform/*
+*.tfstate
+*.tfstate.*
+terraform.tfvars
+terraform.tfvars.json
+*.tfplan
+*.tfbackup

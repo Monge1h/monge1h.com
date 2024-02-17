@@ -1,4 +1,9 @@
 /** @type {import('next').NextConfig} */
 module.exports = {
-  reactStrictMode: true,
+  // reactStrictMode: true,
+  output: 'export',
+  trailingSlash: true,
+  images: {
+    unoptimized: true,
+  },
 }

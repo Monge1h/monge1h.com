@@ -1,0 +1,58 @@
+name: Deploy to AWS
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Check for changes outside terraform directory
+        id: check_changes
+        run: |
+          if git diff --name-only ${{ github.event.before }} ${{ github.sha }} | grep -v '^terraform/'; then
+            echo "::set-output name=changes_detected::true"
+          else
+            echo "::set-output name=changes_detected::false"
+          fi
+
+      - name: Setup Node.js
+        if: steps.check_changes.outputs.changes_detected == 'true'
+        uses: actions/setup-node@v2
+        with:
+          node-version: 14
+
+      - name: Install dependencies
+        if: steps.check_changes.outputs.changes_detected == 'true'
+        run: npm ci
+
+      - name: Build and export Next.js site
+        if: steps.check_changes.outputs.changes_detected == 'true'
+        run: |
+          npm run build
+
+      - name: Configure AWS credentials
+        if: steps.check_changes.outputs.changes_detected == 'true'
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: us-west-2
+
+      - name: Initialize Terraform
+        if: steps.check_changes.outputs.changes_detected == 'true'
+        run: |
+          terraform init
+          terraform apply -auto-approve
+
+      - name: Sync site to S3
+        if: steps.check_changes.outputs.changes_detected == 'true'
+        run: aws s3 sync ./out s3://${{ env.BUCKET_NAME }}
+        env:
+          BUCKET_NAME: ${{ secrets.BUCKET_NAME }}
