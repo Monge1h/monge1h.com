@@ -84,7 +84,7 @@ function generateTimeline(jobs: Job[]) {
         )}
         <div className={`md:tw-col-span-4 tw-col-span-9 tw-mx-4`}>
           <div className="tw-mb-8 md:tw-flex  tw-justify-between tw-items-center tw-w-full">
-            <div className={`tw-order-1 tw-bg-[${job.color}] tw-shadow-xl tw-w-full  tw-px-6 tw-py-4`}>
+            <div className={`tw-order-1 tw-shadow-xl tw-w-full  tw-px-6 tw-py-4`} style={{backgroundColor: job.color}}>
               <h3 className="tw-mb-3 tw-font-bold tw-text-white tw-text-4xl">
                 {job.title}
               </h3>
