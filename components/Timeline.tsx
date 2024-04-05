@@ -75,7 +75,7 @@ function generateTimeline(jobs: Job[]) {
           <div className="tw-col-span-4 tw-w-full"></div>
         )}
         {!isLeft && (
-          <div className="tw-relative tw-col-span-1 tw-w-full tw-h-full md:tw-flex tw-justify-center tw-items-center">
+          <div className="tw-relative tw-col-span-1 tw-w-full tw-h-full md:tw-flex tw-justify-center tw-items-center tw-hidden">
             <div className="tw-h-full tw-w-1 tw-bg-indigo-300"></div>
             <div className="tw-absolute tw-bg-indigo-400 tw-z-10 tw-text-white tw-text-lg tw-text-center tw-p-2">
               {job.duration}
@@ -108,7 +108,7 @@ function generateTimeline(jobs: Job[]) {
           </div>
         </div>
         {isLeft && (
-          <div className="tw-relative tw-col-span-1 tw-w-full tw-h-full md:tw-flex tw-justify-center tw-items-center">
+          <div className="tw-relative tw-col-span-1 tw-w-full tw-h-full md:tw-flex tw-justify-center tw-items-center tw-hidden">
             <div className="tw-h-full tw-w-1 tw-bg-indigo-300"></div>
             <div className="tw-absolute tw-bg-indigo-400 tw-z-10 tw-text-white tw-text-lg tw-text-center tw-p-2">
               {job.duration}
