@@ -114,7 +114,7 @@ resource "aws_cloudfront_distribution" "distribution" {
   }
 
   origin {
-    domain_name = aws_s3_bucket.website_bucket.bucket_regional_domain_name
+    domain_name = aws_s3_bucket.website_bucket.website_endpoint
     origin_id   = "website-bucket"
 
     custom_origin_config {
