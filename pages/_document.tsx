@@ -1,31 +1,27 @@
-import Document, {
-	Html,
-	Head,
-	Main,
-	NextScript,
-	DocumentContext,
-} from "next/document";
+import Document, { Html, Head, Main, NextScript, DocumentContext } from 'next/document'
 
-class MyDocument extends Document {
-	static async getInitialProps(ctx: DocumentContext) {
-		const initialProps = await Document.getInitialProps(ctx);
-		return { ...initialProps };
-	}
-
-	render() {
-		return (
-			<Html>
-				<Head>
-
-				</Head>
-
-				<body>
-					<Main />
-					<NextScript />
-				</body>
-			</Html>
-		);
-	}
+interface DocumentProps {
+  pathname: string
 }
 
-export default MyDocument;
+class MyDocument extends Document<DocumentProps> {
+  static async getInitialProps(ctx: DocumentContext) {
+    const initialProps = await Document.getInitialProps(ctx)
+    return { ...initialProps, pathname: ctx.pathname }
+  }
+
+  render() {
+    const lang = this.props.pathname?.startsWith('/es') ? 'es' : 'en'
+    return (
+      <Html lang={lang}>
+        <Head />
+        <body>
+          <Main />
+          <NextScript />
+        </body>
+      </Html>
+    )
+  }
+}
+
+export default MyDocument

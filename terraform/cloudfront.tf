@@ -70,6 +70,14 @@ data "aws_cloudfront_cache_policy" "managed_caching_optimized_uncompressed" {
   name = "Managed-CachingOptimized"
 }
 
+resource "aws_cloudfront_function" "locale_redirect" {
+  name    = "monge1h-locale-redirect"
+  runtime = "cloudfront-js-2.0"
+  comment = "Redirects / to /es/ based on the lang cookie or Accept-Language"
+  publish = true
+  code    = file("${path.module}/functions/locale-redirect.js")
+}
+
 resource "aws_cloudfront_distribution" "distribution" {
   enabled             = true
   is_ipv6_enabled     = true
@@ -90,20 +98,25 @@ resource "aws_cloudfront_distribution" "distribution" {
 
     origin_request_policy_id = data.aws_cloudfront_origin_request_policy.managed_cors_s3_origin.id
     cache_policy_id          = data.aws_cloudfront_cache_policy.managed_caching_optimized_uncompressed.id
+
+    function_association {
+      event_type   = "viewer-request"
+      function_arn = aws_cloudfront_function.locale_redirect.arn
+    }
   }
 
   aliases = ["monge1h.com","www.monge1h.com"]
 
   custom_error_response {
     error_code            = 404
-    response_code         = 200
-    response_page_path    = "/index.html"
+    response_code         = 404
+    response_page_path    = "/404.html"
     error_caching_min_ttl = 0
   }
-    custom_error_response {
-    error_code         = 403
-    response_page_path = "/index.html"
-    response_code      = 200
+  custom_error_response {
+    error_code            = 403
+    response_page_path    = "/404.html"
+    response_code         = 404
     error_caching_min_ttl = 300
   }
 

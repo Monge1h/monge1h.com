@@ -44,3 +44,8 @@ jobs:
         run: aws s3 sync ./out s3://${{ env.BUCKET_NAME }}
         env:
           BUCKET_NAME: ${{ secrets.BUCKET_NAME }}
+
+      - name: Invalidate CloudFront cache
+        run: |
+          DIST_ID=$(cd terraform && terraform output -raw distribution_id)
+          aws cloudfront create-invalidation --distribution-id "$DIST_ID" --paths "/*"

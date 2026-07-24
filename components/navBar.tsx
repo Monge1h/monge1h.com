@@ -1,32 +1,99 @@
-import {useState} from 'react'
+import { useState } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-import styles from './navBar.module.css'
+import { getDict, Locale, localizedPath, stripLocale, switchLocalePath } from '../lib/i18n'
+import { GlobeIcon } from './icons'
 
-export default function NavBar(){
-    const [sideBar, setSideBar] = useState(false)
+export default function NavBar({ locale }: { locale: Locale }) {
+  const [open, setOpen] = useState(false)
+  const dict = getDict(locale)
+  const router = useRouter()
+  const bare = stripLocale(router.asPath)
 
-    const path = useRouter()
+  const items = [
+    { href: '/', label: dict.nav.about, active: bare === '/' },
+    { href: '/blog/', label: dict.nav.blog, active: bare.startsWith('/blog') },
+    { href: '/projects/', label: dict.nav.projects, active: bare.startsWith('/projects') },
+    { href: '/contact/', label: dict.nav.contact, active: bare.startsWith('/contact') },
+  ]
 
-    const toggleMenu = () => setSideBar(!sideBar)
-	return (
-<nav className={styles.navContainer}>
-          <Link href="/"><h1 className={styles.h1}>Jorge Monge</h1></Link> 
-            <section id={styles.menu_bar}>
-                <ul className={`${styles.nav} ${sideBar? styles.change : ""}`}>
-                    <li><Link href="/" id={path.route == "/" ? styles.active:""}>ABOUT</Link></li>
-                    <li><Link href="/blog" id={path.route.includes("/blog") ? styles.active:""}>BLOG</Link></li>
-                    <li><Link href="/projects" id={path.route.includes("/projects") ? styles.active:""}>PROJECTS</Link></li>
-                    <li><Link href="/contact" id={path.route == "/contact" ? styles.active:""}>CONTACT</Link></li>
-                </ul>
-                <div className={`${styles.menu_bg} ${sideBar ? styles.change_bg :''}`} id={styles.menu_bg_id} ></div>
-            </section>
-            <div className={`${styles.overlay} ${sideBar ? styles.overlay_display:''}`} onClick={toggleMenu}></div>
-            <div id={styles.menu} className={sideBar? styles.change : ''} onClick={toggleMenu}>
-                    <div id={styles.bar1} className={styles.bar}></div>
-                    <div id={styles.bar2} className={styles.bar}></div>
-                    <div id={styles.bar3} className={styles.bar}></div>
-            </div>
-       </nav>
-	)
+  const otherLocale: Locale = locale === 'en' ? 'es' : 'en'
+  const switchHref = switchLocalePath(router.asPath, otherLocale)
+
+  const rememberLocale = () => {
+    document.cookie = `lang=${otherLocale};path=/;max-age=31536000;samesite=lax`
+    setOpen(false)
+  }
+
+  return (
+    <header className="sticky top-0 z-40 border-b border-white/5 bg-ink/80 backdrop-blur">
+      <nav className="mx-auto flex h-16 max-w-5xl items-center justify-between px-6">
+        <Link
+          href={localizedPath(locale, '/')}
+          className="text-lg font-semibold tracking-tight text-white"
+          onClick={() => setOpen(false)}
+        >
+          Jorge Monge<span className="text-kiwi">.</span>
+        </Link>
+
+        <div className="flex items-center gap-4">
+          <ul className="hidden items-center gap-6 text-sm font-medium md:flex">
+            {items.map((item) => (
+              <li key={item.href}>
+                <Link
+                  href={localizedPath(locale, item.href)}
+                  className={`transition-colors hover:text-white ${item.active ? 'text-white' : 'text-zinc-400'}`}
+                >
+                  {item.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+
+          <Link
+            href={switchHref}
+            onClick={rememberLocale}
+            aria-label={dict.nav.switchLabel}
+            title={dict.nav.switchLabel}
+            className="flex items-center gap-1.5 rounded-full border border-ink-border px-3 py-1.5 text-xs font-semibold text-zinc-300 transition-colors hover:border-kiwi hover:text-kiwi"
+          >
+            <GlobeIcon className="h-4 w-4" />
+            {dict.nav.switchShort}
+          </Link>
+
+          <button
+            type="button"
+            aria-label="Menu"
+            aria-expanded={open}
+            onClick={() => setOpen(!open)}
+            className="flex h-9 w-9 flex-col items-center justify-center gap-1.5 md:hidden"
+          >
+            <span
+              className={`h-0.5 w-5 bg-zinc-200 transition-transform ${open ? 'translate-y-2 rotate-45' : ''}`}
+            />
+            <span className={`h-0.5 w-5 bg-zinc-200 transition-opacity ${open ? 'opacity-0' : ''}`} />
+            <span
+              className={`h-0.5 w-5 bg-zinc-200 transition-transform ${open ? '-translate-y-2 -rotate-45' : ''}`}
+            />
+          </button>
+        </div>
+      </nav>
+
+      {open && (
+        <ul className="border-t border-white/5 px-6 py-4 md:hidden">
+          {items.map((item) => (
+            <li key={item.href}>
+              <Link
+                href={localizedPath(locale, item.href)}
+                onClick={() => setOpen(false)}
+                className={`block py-2.5 text-base font-medium ${item.active ? 'text-kiwi' : 'text-zinc-300'}`}
+              >
+                {item.label}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      )}
+    </header>
+  )
 }
