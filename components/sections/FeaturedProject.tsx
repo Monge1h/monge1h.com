@@ -1,43 +1,51 @@
-import Image from 'next/image'
 import Link from 'next/link'
-import React from 'react'
+import { ContentMeta } from '../../lib/content'
+import { getDict, Locale, localizedPath } from '../../lib/i18n'
+import SectionHeading from './SectionHeading'
 
-export default function FeaturedProject() {
-	return (
-		<div className="tw-w-screen tw-flex tw-justify-center ">
+export default function FeaturedProject({
+  locale,
+  project,
+}: {
+  locale: Locale
+  project: ContentMeta
+}) {
+  const dict = getDict(locale)
 
-			<div className="tw-container tw-flex tw-justify-center tw-mt-[40px] md:tw-flex-col tw-flex-col sm:tw-items-center">
-				<h3 className="tw-text-7xl tw-text-kiwi tw-text-center">Featured Project</h3>
-				<section className='tw-flex tw-flex-col sm:tw-flex-row tw-h-full tw-container'>
-					<div className="tw-bg-[#2A2529] tw-w-full sm:tw-w-screen tw-h-auto sm:tw-h-[80vh] md:tw-pl-12 tw-px-2 tw-order-2 sm:tw-order-1">
-						<h5 className='tw-text-6xl tw-text-white tw-mb-0'>Forkify</h5>
-						<p className='tw-text-4xl tw-text-gray-300'>
-							Forkify is a web app that automates the creation
-							of collaborative playlists for road trips, making music
-							selection effortless and enjoyable.
-						</p>
-						<p className='tw-text-4xl tw-text-gray-300'>
-							Users can automatically add their most listened-to songs
-							from recent months, ensuring a diverse and satisfying
-							musical experience for all passengers on the journey.
-						</p>
-						<p className='tw-text-4xl tw-text-gray-300'>
-							This practical and fun solution addresses the common
-							challenge of choosing music that everyone likes
-							during group travels.
-						</p>
+  return (
+    <section className="mx-auto max-w-5xl px-6 py-16">
+      <SectionHeading>{dict.featured.title}</SectionHeading>
 
-						<Link href="/projects/forkify" className="tw-block tw-m-2 tw-p-10 tw-text-3xl tw-text-black tw-transition-all tw-duration-500 tw-bg-gradient-to-tl tw-from-[#456f42] tw-via-[#8dc425] tw-to-[#b0d957] tw-bg-size-200 tw-bg-pos-0 hover:tw-bg-pos-100">Study Case</Link>
-
-
-					</div>
-					<div className="tw-bg-[#2A2529] tw-w-full sm:tw-w-screen tw-h-auto sm:tw-h-[80vh] tw-flex tw-justify-center tw-items-center tw-px-2 tw-order-1 sm:tw-order-2 ">
-						<div className="tw-w-full sm:tw-w-auto tw-h-full sm:tw-h-auto">
-							<Image src="/projects/forkify/forkify.gif" alt="Forkify img" layout="responsive" width={600} height={600}></Image>
-						</div>
-					</div>
-				</section>
-			</div>
-		</div>
-	)
+      <Link
+        href={localizedPath(locale, `/projects/${project.id}/`)}
+        className="group mt-10 block overflow-hidden rounded-2xl border border-ink-border bg-ink-soft transition-colors hover:border-kiwi/60"
+      >
+        <div className="grid md:grid-cols-2">
+          <div className="flex flex-col justify-center gap-4 p-8 md:p-10">
+            <h3 className="text-3xl font-bold text-white transition-colors group-hover:text-kiwi">
+              {project.title}
+            </h3>
+            <p className="leading-relaxed text-zinc-400">
+              {project.featured_description ?? project.post_description}
+            </p>
+            <span className="mt-2 inline-flex items-center gap-2 font-semibold text-kiwi">
+              {dict.featured.cta}
+              <span aria-hidden="true" className="transition-transform group-hover:translate-x-1">
+                →
+              </span>
+            </span>
+          </div>
+          <div className="order-first aspect-video overflow-hidden md:order-none md:aspect-auto">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src={project.post_image_header}
+              alt={project.post_image_alt}
+              className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </Link>
+    </section>
+  )
 }

@@ -1,36 +1,45 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    "./app/**/*.{js,ts,jsx,tsx,mdx}",
-    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./components/**/*.{js,ts,jsx,tsx,mdx}",
- 
-    // Or if using `src` directory:
-    "./src/**/*.{js,ts,jsx,tsx,mdx}",
+    './pages/**/*.{js,ts,jsx,tsx}',
+    './components/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
     extend: {
-      colors:{
-        kiwi:{
+      colors: {
+        kiwi: {
           DEFAULT: '#8dc63f',
           dark: '#7cb82f',
           light: '#b2d235',
         },
+        ink: {
+          DEFAULT: '#0e1116',
+          soft: '#151a21',
+          border: '#242b35',
+        },
       },
-      backgroundSize: {
-        'size-200': '200% 200%',
+      fontFamily: {
+        sans: [
+          'ui-sans-serif',
+          'system-ui',
+          '-apple-system',
+          'BlinkMacSystemFont',
+          '"Segoe UI"',
+          'Roboto',
+          '"Helvetica Neue"',
+          'Arial',
+          'sans-serif',
+        ],
       },
-      backgroundPosition: {
-          'pos-0': '0% 0%',
-          'pos-100': '100% 100%',
-      },
+      typography: ({ theme }) => ({
+        kiwi: {
+          css: {
+            '--tw-prose-links': theme('colors.kiwi.DEFAULT'),
+            '--tw-prose-invert-links': theme('colors.kiwi.DEFAULT'),
+          },
+        },
+      }),
     },
   },
-  prefix: 'tw-',
-  important: true,
-  plugins: [],
-  corePlugins:{
-    preflight: false,
-  }
+  plugins: [require('@tailwindcss/typography')],
 }
-
