@@ -1,7 +1,7 @@
 ---
 title: 'Learning JavaScript with NodeSchool'
 date: '2021-11-02'
-post_description: "Heard of NodeSchool? Learn JavaScript right from your terminal with NodeSchool's interactive workshoppers — here's how, step by step."
+post_description: "Heard of NodeSchool? Learn JavaScript right from your terminal with NodeSchool's interactive workshoppers, here's how, step by step."
 post_image_header: '/blogs/nodeschool/nodeschool.png'
 og_image: '/blogs/nodeschool/og.png'
 post_image_alt: 'NodeSchool logo'
@@ -13,7 +13,7 @@ post_image_alt: 'NodeSchool logo'
 
 NodeSchool is an open source project run by volunteers with two goals: creating high-quality programming curricula and organizing community learning events.
 
-At NodeSchool San Miguel we've been running community learning events, but the other side of NodeSchool also does workshops... in your terminal! Yes, your terminal. They're called **workshoppers** — interactive workshops you can run from the console. Enough talk, let's try one. The first thing we need is Node.js and npm installed.
+At NodeSchool San Miguel we've been running community learning events, but the other side of NodeSchool also does workshops... in your terminal! Yes, your terminal. They're called **workshoppers**, interactive workshops you can run from the console. Enough talk, let's try one. The first thing we need is Node.js and npm installed.
 
 NodeSchool maintains different **workshoppers**, from learning **JavaScript or Node** to Markdown and Electron. Here's a [link](https://nodeschool.io/) so you can check them out 👀.
 
@@ -34,7 +34,7 @@ And we'll see the following:
 
 ![javascripting menu](/blogs/nodeschool/espanol.gif)
 
-Here we can already see the topics this **workshopper** covers — and we can even change its language!
+Here we can already see the topics this **workshopper** covers, and we can even change its language!
 
 Now we pick which exercise to do (ideally in order). When you select one, the instructions for the exercise appear.
 
@@ -54,7 +54,7 @@ javascripting verify introduction.js
 
 ![Exercise error](/blogs/nodeschool/errorja.gif)
 
-Oops! Looks like we got it wrong. The nice part is that the **workshopper** shows us the diff and where we may have made a mistake. In our case it was a typo — we wrote:
+Oops! Looks like we got it wrong. The nice part is that the **workshopper** shows us the diff and where we may have made a mistake. In our case it was a typo, we wrote:
 
 ```js
 console.log('Hello')

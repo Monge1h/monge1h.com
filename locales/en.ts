@@ -2,9 +2,9 @@ export const en = {
   locale: 'en' as 'en' | 'es',
   siteName: 'Jorge Monge',
   meta: {
-    homeTitle: 'Jorge Monge · Software Engineer',
+    homeTitle: 'Jorge Monge · Senior Software Engineer',
     homeDescription:
-      'Jorge Monge is a software engineer from El Salvador who takes products from idea to production — backend, frontend and everything in between.',
+      'Jorge Monge is a senior fullstack JavaScript/TypeScript engineer with more than 5 years building and scaling production SaaS platforms, from architecture to code.',
     blogTitle: 'Blog',
     blogDescription:
       'Articles about JavaScript, TypeScript, web development and the things I learn while building products.',
@@ -13,7 +13,7 @@ export const en = {
       'Side projects and products I have built: web apps, experiments and the stories behind them.',
     contactTitle: 'Contact',
     contactDescription:
-      'Get in touch with Jorge Monge — LinkedIn, GitHub, YouTube, email or schedule a call.',
+      'Get in touch with Jorge Monge: LinkedIn, GitHub, YouTube, email or schedule a call.',
   },
   nav: {
     about: 'About',
@@ -25,9 +25,9 @@ export const en = {
   },
   hero: {
     greeting: "Hi, I'm Jorge Monge",
-    role: 'Software Engineer',
+    role: 'Senior Software Engineer',
     description:
-      'I build things for the internet — and I take them all the way from idea to production. Backend, frontend and everything in between.',
+      'Senior fullstack JavaScript/TypeScript engineer with more than 5 years building and scaling production SaaS platforms. I take products from idea to production: backend, frontend and everything in between.',
     ctaProjects: 'See my work',
     ctaBlog: 'Read the blog',
     location: 'El Salvador · Remote',
@@ -38,38 +38,71 @@ export const en = {
     jobs: [
       {
         title: 'Software Engineer',
-        company: 'Holacasa.mx (YC W23)',
-        type: 'Full-time',
-        period: 'Mar 2024 — Present',
+        company: 'Ravn',
+        type: 'Fullstack · Consultancy',
+        period: 'Sept 2024 to Present',
         location: 'Remote',
         description: [
-          'Part of the Holacasa.mx team, a Y Combinator W23 startup working to change how people buy real estate in Mexico.',
+          'Led the performance refactor of a React calendar grid in a high traffic sports fixtures application, redesigning its state management and component architecture and turning a nearly unusable view into a smooth experience, even on low resource devices like Chromebooks.',
+          'Optimized complex database queries, improved the performance of multiple views, and delivered features end to end across the stack for client products.',
         ],
-        skills: ['Node.js', 'NestJS', 'PostgreSQL', 'Next.js'],
+        skills: ['Node.js', 'React', 'Redux', 'MongoDB', 'PostgreSQL'],
       },
       {
         title: 'Software Engineer',
-        company: 'Terapify (YC W21)',
-        type: 'Full-time',
-        period: 'May 2022 — Oct 2023',
+        company: 'Holacasa (YC W23)',
+        type: 'Fullstack',
+        period: 'Feb 2024 to Sept 2024',
         location: 'Remote',
         description: [
-          'Worked on the Terapify product team, mostly on the backend but contributing across the stack — from initial concept to production.',
-          'During an internal hackathon I turned an idea into a working task-tracking system for psychologists and their patients, building both the frontend and the backend.',
+          'Replaced the Twilio based OTP flow with a custom in house OTP system in the backend, removing a third party dependency and reducing operational costs.',
+          'Helped lead the redesign of the back office dashboard with Next.js and Tailwind CSS, and made the real estate agents app mobile friendly with Capacitor.js, using native plugins on iOS and Android.',
         ],
-        skills: ['Node.js', 'Express', 'MongoDB', 'Next.js', 'AWS', 'Docker'],
+        skills: ['Node.js', 'NestJS', 'PostgreSQL', 'Next.js', 'AWS'],
       },
       {
-        title: 'Back-end Developer',
-        company: 'Hospital Nuestra Señora de La Paz',
+        title: 'Software Engineer',
+        company: 'Terapify (Healthtech SaaS)',
+        type: 'Fullstack',
+        period: 'May 2022 to Oct 2023',
+        location: 'Remote',
+        description: [
+          'Played a key role in implementing AI into the patient and therapist matching system, intelligently guiding patients to the right therapeutic model and significantly improving the initial therapy experience.',
+          'Designed and built a post session task assignment system with an automated email reminder flow for therapists and patients, born in an internal hackathon, and kept driving product improvements from idea to production on a live healthcare platform.',
+        ],
+        skills: ['Node.js', 'Express', 'MongoDB', 'React', 'AWS'],
+      },
+      {
+        title: 'Backend Developer',
+        company: 'Hospital Nuestra Señora de la Paz',
         type: 'On-site',
-        period: 'Aug 2019 — May 2022',
+        period: 'Aug 2019 to Apr 2023',
         location: 'San Miguel, El Salvador',
         description: [
-          'Built a custom ERP system for the hospital as part of the IT team, gathering requirements from every department and turning them into working software.',
-          'Collaborated closely with non-technical staff across the hospital to make sure the system actually fit how each area worked.',
+          'Helped architect and build a custom hospital ERP, playing a key role in migrating from a legacy system to a scalable modern stack, focused primarily on the backend with occasional frontend work.',
+          'Collaborated across departments to gather requirements and feedback, ensuring the ERP aligned with the needs of every hospital area.',
         ],
         skills: ['Node.js', 'Express', 'React', 'MySQL', 'Docker', 'Prisma'],
+      },
+    ],
+  },
+  about: {
+    title: 'More about me',
+    items: [
+      {
+        label: 'Certification',
+        value: 'AWS Cloud Practitioner',
+        detail: 'AWS Academy',
+      },
+      {
+        label: 'Education',
+        value: 'Eng. in Computer Systems and Networks',
+        detail: 'Universidad Gerardo Barrios · 2017 to 2023',
+      },
+      {
+        label: 'Community',
+        value: 'GDG San Miguel organizer',
+        detail: 'Speaker at KCD El Salvador 2023',
       },
     ],
   },
@@ -87,31 +120,29 @@ export const en = {
   },
   listing: {
     blogHeading: 'Blog',
-    blogIntro:
-      'Things I learn while building for the web — JavaScript, TypeScript and side quests.',
+    blogIntro: 'Things I learn while building for the web: JavaScript, TypeScript and side quests.',
     projectsHeading: 'Projects',
-    projectsIntro:
-      'Products and experiments I have built, and what I learned shipping them.',
+    projectsIntro: 'Products and experiments I have built, and what I learned shipping them.',
   },
   post: {
     backToBlog: 'Back to blog',
     backToProjects: 'Back to projects',
     share: 'Share on X',
     notTranslated:
-      'This post has not been translated to English yet — showing the Spanish original.',
+      'This post has not been translated to English yet, so you are reading the Spanish original.',
     publishedOn: 'Published on',
   },
   contact: {
     heading: "Let's talk",
     intro:
-      "Have something in mind — a project, a question or just want to say hi? I'm just a message away.",
+      "Have something in mind? A project, a question or just a hello. I'm just a message away.",
     email: 'Write me an email',
     schedule: 'Schedule a call',
     links: 'You can also find me on',
   },
   footer: {
     heading: 'Have something in mind?',
-    text: "Reach out on any of these platforms — I'm just a message away.",
+    text: "Reach out on any of these platforms. I'm just a message away.",
     visitorLabel: 'You are visitor number:',
     builtWith: 'Built with Next.js · Deployed on AWS',
     rights: 'Jorge Monge',

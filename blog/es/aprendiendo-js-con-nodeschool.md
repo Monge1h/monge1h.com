@@ -36,7 +36,7 @@ Y nos aparecerá lo siguiente:
 
 Aquí ya podemos ver los temas que abarca este **workshopper**, ¡y también podemos cambiarle el idioma!
 
-Ahora que ya cambiamos el idioma (si lo cambiaste), elegimos qué ejercicio queremos hacer — lo ideal es hacerlos en orden. Al seleccionar uno nos aparecen las instrucciones del ejercicio.
+Ahora que ya cambiamos el idioma (si lo cambiaste), elegimos qué ejercicio queremos hacer, lo ideal es hacerlos en orden. Al seleccionar uno nos aparecen las instrucciones del ejercicio.
 
 ![Instrucciones del ejercicio](/blogs/nodeschool/instrucciones.gif)
 
@@ -54,7 +54,7 @@ javascripting verify introduction.js
 
 ![Error en el ejercicio](/blogs/nodeschool/errorja.gif)
 
-¡Ups! Parece que nos equivocamos. Lo bueno es que el **workshopper** nos muestra cuál es la diferencia y en qué nos pudimos haber equivocado. En nuestro caso fue un typo — nosotros escribimos:
+¡Ups! Parece que nos equivocamos. Lo bueno es que el **workshopper** nos muestra cuál es la diferencia y en qué nos pudimos haber equivocado. En nuestro caso fue un typo, nosotros escribimos:
 
 ```js
 console.log('Hello')

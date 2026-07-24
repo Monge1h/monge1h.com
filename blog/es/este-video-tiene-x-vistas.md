@@ -35,7 +35,7 @@ Nos vamos al menú, seleccionamos el submenú **videos** y luego **list**.
 
 ![Sección videos.list de la API](/blogs/cuantas-vistas/Untitled%201.png)
 
-Esta sección muestra la data que podemos obtener de un video y los parámetros necesarios para obtenerla. A nosotros nos interesan las vistas — vienen si pedimos `statistics` — y la data del video para obtener el título anterior, que viene en `snippet`.
+Esta sección muestra la data que podemos obtener de un video y los parámetros necesarios para obtenerla. A nosotros nos interesan las vistas, vienen si pedimos `statistics`, y la data del video para obtener el título anterior, que viene en `snippet`.
 
 Lo bueno es que podemos probar la API desde el mismo sitio, así que eso haremos: buscamos un video y copiamos su ID (los últimos dígitos de la URL del video).
 
@@ -118,7 +118,7 @@ if __name__ == "__main__":
     main()
 ```
 
-Si ejecutamos este script (en mi caso lo guardé como `update.py`) nos va a dar error, porque no tenemos las librerías necesarias. Las instalamos con los siguientes comandos (es recomendado crear un entorno virtual para manejar las dependencias en Python — te recomiendo leer [esto](https://docs.python.org/es/3/tutorial/venv.html) 👀):
+Si ejecutamos este script (en mi caso lo guardé como `update.py`) nos va a dar error, porque no tenemos las librerías necesarias. Las instalamos con los siguientes comandos (es recomendado crear un entorno virtual para manejar las dependencias en Python, te recomiendo leer [esto](https://docs.python.org/es/3/tutorial/venv.html) 👀):
 
 ```bash
 pip install --upgrade google-api-python-client
@@ -220,7 +220,7 @@ def generar_imagen(vistas):
     return path
 ```
 
-Necesitamos una fuente en el directorio, al mismo nivel del archivo — la puedes descargar de Google Fonts o de la página que prefieras. La función nos regresa el path donde se guardó la imagen; con ese dato y la imagen generada ya podemos actualizar la miniatura de nuestro video:
+Necesitamos una fuente en el directorio, al mismo nivel del archivo, la puedes descargar de Google Fonts o de la página que prefieras. La función nos regresa el path donde se guardó la imagen; con ese dato y la imagen generada ya podemos actualizar la miniatura de nuestro video:
 
 ```python
 from generar_miniatura import generar_imagen

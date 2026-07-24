@@ -29,7 +29,7 @@ featured_description: 'Forkify automates collaborative playlists for road trips:
 
 Whenever I go on a road trip with my friends, I always face the same problem: what music to play! So I decided to build a web app that lets me create a collaborative playlist, where just by sharing a link everyone can automatically add their most-listened songs.
 
-I also wanted a project to practice my frontend skills. I used React with Chakra UI and learned a lot from both — it's the first frontend project I finished doing everything myself.
+I also wanted a project to practice my frontend skills. I used React with Chakra UI and learned a lot from both, it's the first frontend project I finished doing everything myself.
 
 The first thing I did was sketch the design in Figma, then build it with Chakra UI 👀
 

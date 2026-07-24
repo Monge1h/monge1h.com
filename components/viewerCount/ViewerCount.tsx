@@ -29,7 +29,7 @@ function ViewerCount({ locale }: { locale: Locale }) {
           })
         })
         .catch(() => {
-          /* the counter is decorative — ignore network failures */
+          /* the counter is decorative, ignore network failures */
         })
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps

@@ -23,11 +23,11 @@ Video: [https://www.youtube.com/watch?v=m3BU4MhgNwo](https://www.youtube.com/wat
 
 ## Componentes de una extensión de Chrome
 
-- **manifest.json** — Es el archivo principal de una extensión: en él le decimos a Chrome qué archivos va a cargar, qué permisos tendrá la extensión sobre el navegador y los datos generales de la extensión.
-- **popup.html** — Aquí definimos lo que se renderiza cuando le damos clic a nuestra extensión.
-- **popup.js** — Aquí va la lógica para interactuar con nuestro popup.html.
-- **content scripts** — Son los archivos que pueden interactuar con el DOM de la pestaña activa del navegador.
-- **background scripts** — Tienen acceso a todas las APIs de Chrome y pueden correr en segundo plano mientras exista la extensión. Sirven, por ejemplo, para detectar cuándo el usuario entra a cierta página o para guardar preferencias.
+- **manifest.json**: es el archivo principal de una extensión: en él le decimos a Chrome qué archivos va a cargar, qué permisos tendrá la extensión sobre el navegador y los datos generales de la extensión.
+- **popup.html**: aquí definimos lo que se renderiza cuando le damos clic a nuestra extensión.
+- **popup.js**: aquí va la lógica para interactuar con nuestro popup.html.
+- **content scripts**: son los archivos que pueden interactuar con el DOM de la pestaña activa del navegador.
+- **background scripts**: tienen acceso a todas las APIs de Chrome y pueden correr en segundo plano mientras exista la extensión. Sirven, por ejemplo, para detectar cuándo el usuario entra a cierta página o para guardar preferencias.
 
 ## Iniciamos con el tutorial
 
@@ -50,7 +50,7 @@ Lo primero es crear el archivo `manifest.json`, que quedaría de la siguiente ma
 }
 ```
 
-Como expliqué antes, en el `manifest.json` ponemos los permisos y los datos generales de la extensión: el nombre, la descripción, la versión. En `permissions` va un arreglo con las cosas a las que queremos que nuestra extensión tenga acceso — en este caso solo las `tabs` — y le indicamos cuál será el popup.
+Como expliqué antes, en el `manifest.json` ponemos los permisos y los datos generales de la extensión: el nombre, la descripción, la versión. En `permissions` va un arreglo con las cosas a las que queremos que nuestra extensión tenga acceso, en este caso solo las `tabs`, y le indicamos cuál será el popup.
 
 ### Instalar la extensión en Chrome
 
@@ -181,7 +181,7 @@ function rotate() {
 }
 ```
 
-Obtenemos las pestañas activas — Chrome nos regresa la actual en la posición 0 — y a esa pestaña le mandamos el mensaje con `action: "alert"` para que genere la alerta, pero ahora desde el DOM de la página, no desde el del popup.
+Obtenemos las pestañas activas, Chrome nos regresa la actual en la posición 0, y a esa pestaña le mandamos el mensaje con `action: "alert"` para que genere la alerta, pero ahora desde el DOM de la página, no desde el del popup.
 
 ![Alerta desde el content script](/blogs/extension/alertacontent.gif)
 

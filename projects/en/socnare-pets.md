@@ -28,11 +28,11 @@ My dog Duque is a gem. But every time I take him out for a walk, the thought of 
 
 ## A nighttime project
 
-Even though it may sound like a full-time thing, the truth is Socnare Pets was born and grew in my free hours. After the gym, before bed — there I was, polishing this idea.
+Even though it may sound like a full-time thing, the truth is Socnare Pets was born and grew in my free hours. After the gym, before bed, there I was, polishing this idea.
 
 ## Fast development: MVP to the rescue
 
-With a clear goal, I went for an MVP (Minimum Viable Product). AWS Lambda was an option, but in the end I chose Next.js. The reason? Its ecosystem and how easy it makes prototyping — essential for projects on a tight schedule.
+With a clear goal, I went for an MVP (Minimum Viable Product). AWS Lambda was an option, but in the end I chose Next.js. The reason? Its ecosystem and how easy it makes prototyping, essential for projects on a tight schedule.
 
 During development I kept my priorities clear. For example, QR scanning and the instant notification were vital. Onboarding, however, I left for later, opting for a Google Form to gauge interest.
 

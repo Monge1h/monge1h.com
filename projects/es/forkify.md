@@ -29,7 +29,7 @@ featured_description: 'Forkify automatiza la creación de playlists colaborativa
 
 Cuando salgo de road trip con mis amigos siempre tengo el mismo problema: ¡qué música poner! Por eso decidí hacer una web app que me permita crear una playlist colaborativa, donde con solo compartir un link cada quien puede agregar sus canciones más escuchadas de manera automática.
 
-También quería un proyecto para practicar mis habilidades de frontend. Usé React con Chakra UI y aprendí bastante de ambos — es el primer proyecto de frontend que terminé haciendo todo yo.
+También quería un proyecto para practicar mis habilidades de frontend. Usé React con Chakra UI y aprendí bastante de ambos, es el primer proyecto de frontend que terminé haciendo todo yo.
 
 Lo primero que hice fue un bosquejo del diseño en Figma, para luego construirlo con Chakra UI 👀
 

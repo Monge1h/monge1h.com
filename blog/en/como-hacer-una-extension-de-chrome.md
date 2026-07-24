@@ -23,15 +23,15 @@ Video: [https://www.youtube.com/watch?v=m3BU4MhgNwo](https://www.youtube.com/wat
 
 ## Components of a Chrome extension
 
-- **manifest.json** — The main file of an extension: here we tell Chrome which files to load, which permissions the extension will have over the browser, and the extension's general metadata.
-- **popup.html** — This defines what gets rendered when we click the extension.
-- **popup.js** — This holds the logic to interact with popup.html.
-- **content scripts** — Files that can interact with the DOM of the browser's active tab.
-- **background scripts** — They have access to all Chrome APIs and can run in the background for as long as the extension exists. Useful, for example, to detect when the user visits a certain page or to store user preferences.
+- **manifest.json**: the main file of an extension: here we tell Chrome which files to load, which permissions the extension will have over the browser, and the extension's general metadata.
+- **popup.html**: defines what gets rendered when we click the extension.
+- **popup.js**: holds the logic to interact with popup.html.
+- **content scripts**: files that can interact with the DOM of the browser's active tab.
+- **background scripts**: they have access to all Chrome APIs and can run in the background for as long as the extension exists. Useful, for example, to detect when the user visits a certain page or to store user preferences.
 
 ## Let's start the tutorial
 
-Our extension will use popups and content scripts, since we only need to interact with the extension's DOM and with the DOM of the active page — in this case, YouTube.
+Our extension will use popups and content scripts, since we only need to interact with the extension's DOM and with the DOM of the active page, in this case, YouTube.
 
 ### manifest.json
 
@@ -50,7 +50,7 @@ The first thing is creating the `manifest.json` file, which looks like this:
 }
 ```
 
-As I explained earlier, the `manifest.json` holds the permissions and general metadata of the extension: name, description, version. `permissions` is an array of the things we want our extension to access — in this case just `tabs` — and we point it to our popup.
+As I explained earlier, the `manifest.json` holds the permissions and general metadata of the extension: name, description, version. `permissions` is an array of the things we want our extension to access, in this case just `tabs`, and we point it to our popup.
 
 ### Installing the extension in Chrome
 
@@ -123,7 +123,7 @@ We grab the button and add a listener so that clicking it fires an alert. But we
 
 ![Difference between alerts](/blogs/extension/alert.gif)
 
-That's because everything we do from `popup.js` operates on the DOM of `popup.html` — and that doesn't work for us: we want to interact with the DOM of the YouTube page to rotate the videos. That's what **content scripts** are for: they connect the extension with the DOM of the active tab. Let's create ours.
+That's because everything we do from `popup.js` operates on the DOM of `popup.html`, and that doesn't work for us: we want to interact with the DOM of the YouTube page to rotate the videos. That's what **content scripts** are for: they connect the extension with the DOM of the active tab. Let's create ours.
 
 ### Content scripts
 
@@ -181,7 +181,7 @@ function rotate() {
 }
 ```
 
-We query the active tabs — Chrome returns the current one at position 0 — and send that tab the message with `action: "alert"` so it generates the alert, this time from the page's DOM, not the popup's.
+We query the active tabs, Chrome returns the current one at position 0, and send that tab the message with `action: "alert"` so it generates the alert, this time from the page's DOM, not the popup's.
 
 ![Alert fired from the content script](/blogs/extension/alertacontent.gif)
 
@@ -232,7 +232,7 @@ function rotate() {
 }
 ```
 
-And we got what we wanted — our extension works!
+And we got what we wanted, our extension works!
 
 ![Extension working](/blogs/extension/ezgif.com-gif-maker_(1).gif)
 

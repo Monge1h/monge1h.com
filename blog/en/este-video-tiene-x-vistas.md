@@ -35,7 +35,7 @@ Go to the menu, select the **videos** submenu, then **list**.
 
 ![videos.list section of the API](/blogs/cuantas-vistas/Untitled%201.png)
 
-This section shows the data we can get for a video and the parameters required to get it. We care about the views — they come back if we request `statistics` — and the video's data to get the current title, which comes in `snippet`.
+This section shows the data we can get for a video and the parameters required to get it. We care about the views, they come back if we request `statistics`, and the video's data to get the current title, which comes in `snippet`.
 
 The nice part is that we can try the API right from the site, so let's do that: find a video and copy its ID (the last characters of the video's URL).
 
@@ -118,7 +118,7 @@ if __name__ == "__main__":
     main()
 ```
 
-If we run this script (I saved it as `update.py`) it will fail, because we don't have the required libraries yet. We install them with the following commands (it's recommended to create a virtual environment to manage Python dependencies — I suggest reading [this](https://docs.python.org/3/tutorial/venv.html) 👀):
+If we run this script (I saved it as `update.py`) it will fail, because we don't have the required libraries yet. We install them with the following commands (it's recommended to create a virtual environment to manage Python dependencies, I suggest reading [this](https://docs.python.org/3/tutorial/venv.html) 👀):
 
 ```bash
 pip install --upgrade google-api-python-client
@@ -169,7 +169,7 @@ Now we can run the script. Remember to pass a video ID as an argument:
 python update.py YOUR_VIDEO_ID
 ```
 
-When you run it, the console prints a link you need to open to get the token the script needs. Open the link and select the account that owns the video you want to modify (it has to be your own video). It gives you a token — copy it, paste it into the console prompt, and the script fetches the video's data:
+When you run it, the console prints a link you need to open to get the token the script needs. Open the link and select the account that owns the video you want to modify (it has to be your own video). It gives you a token, copy it, paste it into the console prompt, and the script fetches the video's data:
 
 ![Video data in the console](/blogs/cuantas-vistas/datos.gif)
 
@@ -220,7 +220,7 @@ def generar_imagen(vistas):
     return path
 ```
 
-We need a font file in the same directory — you can download one from Google Fonts or wherever you prefer. The function returns the path where the image was saved; with that and the generated image we can update our video's thumbnail:
+We need a font file in the same directory, you can download one from Google Fonts or wherever you prefer. The function returns the path where the image was saved; with that and the generated image we can update our video's thumbnail:
 
 ```python
 from generar_miniatura import generar_imagen

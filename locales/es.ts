@@ -4,9 +4,9 @@ export const es: Dictionary = {
   locale: 'es',
   siteName: 'Jorge Monge',
   meta: {
-    homeTitle: 'Jorge Monge · Ingeniero de Software',
+    homeTitle: 'Jorge Monge · Ingeniero de Software Senior',
     homeDescription:
-      'Jorge Monge es un ingeniero de software salvadoreño que lleva productos de la idea a producción: backend, frontend y todo lo que hay en medio.',
+      'Jorge Monge es un ingeniero fullstack JavaScript/TypeScript senior con más de 5 años construyendo y escalando plataformas SaaS en producción, desde la arquitectura hasta el código.',
     blogTitle: 'Blog',
     blogDescription:
       'Artículos sobre JavaScript, TypeScript, desarrollo web y lo que voy aprendiendo mientras construyo productos.',
@@ -27,9 +27,9 @@ export const es: Dictionary = {
   },
   hero: {
     greeting: 'Hola, soy Jorge Monge',
-    role: 'Ingeniero de Software',
+    role: 'Ingeniero de Software Senior',
     description:
-      'Construyo cosas para internet — y las llevo de la idea hasta producción. Backend, frontend y todo lo que hay en medio.',
+      'Ingeniero fullstack JavaScript/TypeScript senior con más de 5 años construyendo y escalando plataformas SaaS en producción. Llevo productos de la idea a producción: backend, frontend y todo lo que hay en medio.',
     ctaProjects: 'Ver mis proyectos',
     ctaBlog: 'Leer el blog',
     location: 'El Salvador · Remoto',
@@ -40,38 +40,71 @@ export const es: Dictionary = {
     jobs: [
       {
         title: 'Ingeniero de Software',
-        company: 'Holacasa.mx (YC W23)',
-        type: 'Tiempo completo',
-        period: 'Mar 2024 — Actualidad',
+        company: 'Ravn',
+        type: 'Fullstack · Consultoría',
+        period: 'Sep 2024 a la actualidad',
         location: 'Remoto',
         description: [
-          'Formo parte del equipo de Holacasa.mx, una startup de Y Combinator W23 que busca cambiar la forma en que se compran inmuebles en México.',
+          'Lideré el refactor de rendimiento de un calendario en React para una aplicación de fixtures deportivos de alto tráfico, rediseñando su manejo de estado y su arquitectura de componentes hasta convertir una vista casi inutilizable en una experiencia fluida, incluso en dispositivos de bajos recursos como Chromebooks.',
+          'Optimicé consultas complejas de base de datos, mejoré el rendimiento de múltiples vistas y entregué funcionalidades de punta a punta en todo el stack para productos de clientes.',
         ],
-        skills: ['Node.js', 'NestJS', 'PostgreSQL', 'Next.js'],
+        skills: ['Node.js', 'React', 'Redux', 'MongoDB', 'PostgreSQL'],
       },
       {
         title: 'Ingeniero de Software',
-        company: 'Terapify (YC W21)',
-        type: 'Tiempo completo',
-        period: 'May 2022 — Oct 2023',
+        company: 'Holacasa (YC W23)',
+        type: 'Fullstack',
+        period: 'Feb 2024 a Sep 2024',
         location: 'Remoto',
         description: [
-          'Trabajé en el equipo de producto de Terapify, principalmente en backend pero aportando en todo el stack: desde el concepto inicial hasta producción.',
-          'En un hackathon interno convertí una idea en un sistema funcional de seguimiento de tareas para psicólogos y pacientes, construyendo tanto el frontend como el backend.',
+          'Reemplacé el flujo de OTP basado en Twilio por un sistema de OTP propio en el backend, eliminando una dependencia de terceros y reduciendo costos operativos.',
+          'Ayudé a liderar el rediseño del dashboard de back office con Next.js y Tailwind CSS, e hice mobile friendly la app de los agentes inmobiliarios con Capacitor.js, usando plugins nativos en iOS y Android.',
         ],
-        skills: ['Node.js', 'Express', 'MongoDB', 'Next.js', 'AWS', 'Docker'],
+        skills: ['Node.js', 'NestJS', 'PostgreSQL', 'Next.js', 'AWS'],
       },
       {
-        title: 'Desarrollador Back-end',
-        company: 'Hospital Nuestra Señora de La Paz',
+        title: 'Ingeniero de Software',
+        company: 'Terapify (SaaS de healthtech)',
+        type: 'Fullstack',
+        period: 'May 2022 a Oct 2023',
+        location: 'Remoto',
+        description: [
+          'Jugué un papel clave implementando IA en el sistema de matching entre pacientes y terapeutas, guiando de forma inteligente a los pacientes hacia el modelo terapéutico correcto y mejorando significativamente la experiencia inicial de terapia.',
+          'Diseñé y construí un sistema de asignación de tareas post sesión con recordatorios automáticos por correo para terapeutas y pacientes, nacido en un hackathon interno, y seguí impulsando mejoras de producto de la idea a producción en una plataforma de salud en vivo.',
+        ],
+        skills: ['Node.js', 'Express', 'MongoDB', 'React', 'AWS'],
+      },
+      {
+        title: 'Desarrollador Backend',
+        company: 'Hospital Nuestra Señora de la Paz',
         type: 'Presencial',
-        period: 'Ago 2019 — May 2022',
+        period: 'Ago 2019 a Abr 2023',
         location: 'San Miguel, El Salvador',
         description: [
-          'Construí un sistema ERP a la medida para el hospital como parte del equipo de TI, levantando requerimientos de cada departamento y convirtiéndolos en software funcional.',
-          'Colaboré de cerca con personal no técnico de todas las áreas del hospital para que el sistema se adaptara a la forma real de trabajar de cada una.',
+          'Ayudé a diseñar y construir un ERP a la medida para el hospital, jugando un papel clave en la migración de un sistema legacy a un stack moderno y escalable, enfocado principalmente en el backend con trabajo ocasional de frontend.',
+          'Colaboré con todos los departamentos levantando requerimientos y retroalimentación, asegurando que el ERP se adaptara a las necesidades de cada área del hospital.',
         ],
         skills: ['Node.js', 'Express', 'React', 'MySQL', 'Docker', 'Prisma'],
+      },
+    ],
+  },
+  about: {
+    title: 'Más sobre mí',
+    items: [
+      {
+        label: 'Certificación',
+        value: 'AWS Cloud Practitioner',
+        detail: 'AWS Academy',
+      },
+      {
+        label: 'Educación',
+        value: 'Ing. en Sistemas Informáticos y Redes',
+        detail: 'Universidad Gerardo Barrios · 2017 a 2023',
+      },
+      {
+        label: 'Comunidad',
+        value: 'Organizador de GDG San Miguel',
+        detail: 'Speaker en KCD El Salvador 2023',
       },
     ],
   },
@@ -92,28 +125,27 @@ export const es: Dictionary = {
     blogIntro:
       'Lo que voy aprendiendo construyendo para la web: JavaScript, TypeScript y misiones secundarias.',
     projectsHeading: 'Proyectos',
-    projectsIntro:
-      'Productos y experimentos que he construido, y lo que aprendí lanzándolos.',
+    projectsIntro: 'Productos y experimentos que he construido, y lo que aprendí lanzándolos.',
   },
   post: {
     backToBlog: 'Volver al blog',
     backToProjects: 'Volver a proyectos',
     share: 'Compartir en X',
     notTranslated:
-      'Este post aún no está traducido al español — mostrando el original en inglés.',
+      'Este post aún no está traducido al español, así que estás leyendo el original en inglés.',
     publishedOn: 'Publicado el',
   },
   contact: {
     heading: 'Hablemos',
     intro:
-      '¿Tienes algo en mente — un proyecto, una duda o solo quieres saludar? Estoy a un mensaje de distancia.',
+      '¿Tienes algo en mente? Un proyecto, una duda o solo saludar. Estoy a un mensaje de distancia.',
     email: 'Escríbeme un correo',
     schedule: 'Agenda una llamada',
     links: 'También me encuentras en',
   },
   footer: {
     heading: '¿Tienes algo en mente?',
-    text: 'Escríbeme por cualquiera de estas plataformas — estoy a un mensaje de distancia.',
+    text: 'Escríbeme por cualquiera de estas plataformas. Estoy a un mensaje de distancia.',
     visitorLabel: 'Eres el visitante número:',
     builtWith: 'Hecho con Next.js · Desplegado en AWS',
     rights: 'Jorge Monge',

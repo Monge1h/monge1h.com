@@ -3,6 +3,7 @@ import Layout from '../layout'
 import Seo from '../seo'
 import Hero from '../sections/Hero'
 import Experience from '../sections/Experience'
+import About from '../sections/About'
 import FeaturedProject from '../sections/FeaturedProject'
 import SectionHeading from '../sections/SectionHeading'
 import PostCard from '../postCard'
@@ -23,7 +24,7 @@ const personJsonLd = {
   name: 'Jorge Monge',
   url: SITE_URL,
   image: `${SITE_URL}/images/Monge.jpg`,
-  jobTitle: 'Software Engineer',
+  jobTitle: 'Senior Software Engineer',
   email: 'mailto:hey@monge1h.com',
   sameAs: [
     'https://www.github.com/monge1h',
@@ -49,6 +50,7 @@ export default function HomeView({ locale, featured, projects, posts }: HomeProp
 
       <Hero locale={locale} />
       <Experience locale={locale} />
+      <About locale={locale} />
       {featured && <FeaturedProject locale={locale} project={featured} />}
 
       <section className="mx-auto max-w-5xl px-6 py-16">

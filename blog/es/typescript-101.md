@@ -11,7 +11,7 @@ post_image_alt: 'Logo de TypeScript'
 
 Hey, entraste al blog, ¡qué genial!
 
-Estoy seguro de que ya sabes qué es TypeScript, o por lo menos alguna vez has escuchado hablar de este lenguaje. Yo también había escuchado hablar de él — y mucho — pero no tenía claros algunos conceptos, así que escribiré el blog que me hubiera gustado leer sobre las bases de TypeScript. Como dijo un sabio: `¡iniciemos por el principio!`
+Estoy seguro de que ya sabes qué es TypeScript, o por lo menos alguna vez has escuchado hablar de este lenguaje. Yo también había escuchado hablar de él, y mucho, pero no tenía claros algunos conceptos, así que escribiré el blog que me hubiera gustado leer sobre las bases de TypeScript. Como dijo un sabio: `¡iniciemos por el principio!`
 
 TypeScript, en simples palabras, es una versión mejorada y más avanzada de JavaScript. Esto es porque es un `superset` de JavaScript: le agrega características adicionales, algunas de ellas son:
 
@@ -76,9 +76,9 @@ Oh oh, ¿qué hicimos mal? 👎
 
 Pues resulta que, si nos fijamos bien, al final del último paréntesis hay otros dos puntos: en TypeScript también podemos declarar explícitamente de qué tipo será el retorno de la función. En este caso le estamos diciendo que el retorno es un `number`, pero al sumar dos strings nos dará otro string.
 
-En la parte de TypeScript escribimos un poquito más de código que en JavaScript, pero eso extra nos ayuda muchísimo a encontrar este tipo de errores que vimos en los gifs — errores que muchas veces cometemos y de los que nos damos cuenta cuando ya es muy tarde.
+En la parte de TypeScript escribimos un poquito más de código que en JavaScript, pero eso extra nos ayuda muchísimo a encontrar este tipo de errores que vimos en los gifs, errores que muchas veces cometemos y de los que nos damos cuenta cuando ya es muy tarde.
 
-Este tipo de cosas son las que vuelven a TypeScript una gran herramienta: nos ayuda a que cosas tan simples como estas no se rompan. Al decirle a TypeScript que los dos parámetros son de tipo `number` y que el resultado también es `number`, estamos siendo claros con lo que esperamos. Cuando TypeScript detecta que lo que le pasamos no logrará ese resultado, nos da el error en la etapa de desarrollo — no cuando ya está en producción.
+Este tipo de cosas son las que vuelven a TypeScript una gran herramienta: nos ayuda a que cosas tan simples como estas no se rompan. Al decirle a TypeScript que los dos parámetros son de tipo `number` y que el resultado también es `number`, estamos siendo claros con lo que esperamos. Cuando TypeScript detecta que lo que le pasamos no logrará ese resultado, nos da el error en la etapa de desarrollo, no cuando ya está en producción.
 
 ![Gif de celebración](/blogs/typescript-101/giphy.gif)
 
@@ -86,12 +86,12 @@ Este tipo de cosas son las que vuelven a TypeScript una gran herramienta: nos ay
 
 Hoy en día puedes usar TypeScript en todos los casos donde puedes usar JavaScript. Hay librerías y frameworks que ya fueron desarrollados con TypeScript y con TypeScript en mente, por ejemplo:
 
-- **Nest.js** — [Nest.js](https://nestjs.com/) brinda una estructura clara y una serie de herramientas para construir aplicaciones web/backend con TypeScript de manera más eficiente y sencilla.
-- **Angular** — [Angular](https://angular.io/) es un framework muy famoso de frontend, desarrollado por Google, que hace un gran uso de TypeScript.
+- **Nest.js**: [Nest.js](https://nestjs.com/) brinda una estructura clara y una serie de herramientas para construir aplicaciones web/backend con TypeScript de manera más eficiente y sencilla.
+- **Angular**: [Angular](https://angular.io/) es un framework muy famoso de frontend, desarrollado por Google, que hace un gran uso de TypeScript.
 
 En otros casos te tocará integrar TypeScript de una manera más manual, pero estoy seguro de que encontrarás mil guías para usarlo con tu framework de preferencia, ya que la comunidad se ha encargado de crear los tipados de estos frameworks y librerías.
 
-Por ejemplo, el framework por "excelencia" de Node.js, `Express`, no fue desarrollado con TypeScript — a diferencia de `Nest.js`, que sí. Pero que no esté desarrollado en TypeScript no significa que no podamos usarlo con él.
+Por ejemplo, el framework por "excelencia" de Node.js, `Express`, no fue desarrollado con TypeScript, a diferencia de `Nest.js`, que sí. Pero que no esté desarrollado en TypeScript no significa que no podamos usarlo con él.
 
 ## Para usar Express con TypeScript podríamos hacer lo siguiente:
 
@@ -107,8 +107,8 @@ npm install typescript ts-node @types/express -D
 
 Si has desarrollado antes con Node.js, tal vez algunos paquetes te resulten conocidos, pero si eres nuevo en TypeScript puede que dos no lo sean: `ts-node` y `@types/express`.
 
-- **ts-node** — Es una herramienta que nos permite ejecutar código de TypeScript directamente en Node.js sin tener que compilarlo. Para desarrollo es muy útil, pero hay que tener en cuenta que no es recomendable para entornos reales y producción, ya que usa mucha memoria al compilar el código en tiempo real (más abajo te enseño cómo se compila el código para producción).
-- **@types/express** — Este paquete proporciona los tipos de datos para Express. Este patrón es muy común en librerías que no fueron desarrolladas con TypeScript; muchas veces el mismo editor de código te recomienda descargar estos paquetes para poder usar tipado en librerías que no fueron escritas con TypeScript.
+- **ts-node**: es una herramienta que nos permite ejecutar código de TypeScript directamente en Node.js sin tener que compilarlo. Para desarrollo es muy útil, pero hay que tener en cuenta que no es recomendable para entornos reales y producción, ya que usa mucha memoria al compilar el código en tiempo real (más abajo te enseño cómo se compila el código para producción).
+- **@types/express**: este paquete proporciona los tipos de datos para Express. Este patrón es muy común en librerías que no fueron desarrolladas con TypeScript; muchas veces el mismo editor de código te recomienda descargar estos paquetes para poder usar tipado en librerías que no fueron escritas con TypeScript.
 
 ### 2. Crear un archivo `tsconfig.json`
 
@@ -158,13 +158,13 @@ app.listen(3000, () => {
 });
 ```
 
-Si te fijas, además de `express` estamos importando `{ Request, Response }` y los asignamos como tipos de los parámetros. No son tipos de datos primitivos — es decir, `res` no es un `number` o un `string`, sino de tipo `Response`. Estos tipos más complejos pueden crearse mediante interfaces o clases; en este caso `Request` y `Response` son interfaces que nos da la librería. La ventaja de usar TypeScript en frameworks como Express, que no fueron creados con TypeScript, es que tenemos mayor claridad de qué podemos hacer con cada parte del código, pues vemos de manera más sencilla a qué métodos podemos acceder con cada tipo de variable.
+Si te fijas, además de `express` estamos importando `{ Request, Response }` y los asignamos como tipos de los parámetros. No son tipos de datos primitivos, es decir, `res` no es un `number` o un `string`, sino de tipo `Response`. Estos tipos más complejos pueden crearse mediante interfaces o clases; en este caso `Request` y `Response` son interfaces que nos da la librería. La ventaja de usar TypeScript en frameworks como Express, que no fueron creados con TypeScript, es que tenemos mayor claridad de qué podemos hacer con cada parte del código, pues vemos de manera más sencilla a qué métodos podemos acceder con cada tipo de variable.
 
 Por ejemplo:
 
 ![Autocompletado con Express y TypeScript](/blogs/typescript-101/express.gif)
 
-En este caso tenemos un server escrito con TS y otro con JS. Si te fijas, la versión de TS nos indica que `enviar` no es una propiedad de `Response` y nos marca un error — algo que no sucede en la versión de JS. 🤯
+En este caso tenemos un server escrito con TS y otro con JS. Si te fijas, la versión de TS nos indica que `enviar` no es una propiedad de `Response` y nos marca un error, algo que no sucede en la versión de JS. 🤯
 
 ### 4. Correr con TypeScript
 

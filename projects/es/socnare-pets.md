@@ -32,7 +32,7 @@ Aunque parezca algo de tiempo completo, la realidad es que Socnare Pets nació y
 
 ## Desarrollo rápido: MVP al rescate
 
-Con un objetivo claro, decidí optar por un MVP (Producto Mínimo Viable). Aunque AWS Lambda fue una opción, al final me decanté por Next.js. ¿La razón? Su ecosistema y la facilidad para prototipar — esencial para proyectos con tiempos ajustados.
+Con un objetivo claro, decidí optar por un MVP (Producto Mínimo Viable). Aunque AWS Lambda fue una opción, al final me decanté por Next.js. ¿La razón? Su ecosistema y la facilidad para prototipar, esencial para proyectos con tiempos ajustados.
 
 Durante el desarrollo tuve claras mis prioridades. Por ejemplo, el escaneo del QR y la notificación inmediata eran vitales. Sin embargo, dejé el onboarding para después, optando por un formulario de Google para recabar el interés.
 
