@@ -4,7 +4,7 @@ export const en = {
   meta: {
     homeTitle: 'Jorge Monge · Senior Software Engineer',
     homeDescription:
-      'Jorge Monge is a senior fullstack JavaScript/TypeScript engineer with more than 5 years building and scaling production SaaS platforms, from architecture to code.',
+      'Jorge Monge is a senior fullstack JavaScript/TypeScript engineer with {years} years of experience building and scaling production SaaS platforms, from architecture to code.',
     blogTitle: 'Blog',
     blogDescription:
       'Articles about JavaScript, TypeScript, web development and the things I learn while building products.',
@@ -27,7 +27,7 @@ export const en = {
     greeting: "Hi, I'm Jorge Monge",
     role: 'Senior Software Engineer',
     description:
-      'Senior fullstack JavaScript/TypeScript engineer with more than 5 years building and scaling production SaaS platforms. I take products from idea to production: backend, frontend and everything in between.',
+      'Senior fullstack JavaScript/TypeScript engineer with {years} years of experience building and scaling production SaaS platforms. I take products from idea to production: backend, frontend and everything in between.',
     ctaProjects: 'See my work',
     ctaBlog: 'Read the blog',
     location: 'El Salvador · Remote',

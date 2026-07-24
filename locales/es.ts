@@ -6,7 +6,7 @@ export const es: Dictionary = {
   meta: {
     homeTitle: 'Jorge Monge · Ingeniero de Software Senior',
     homeDescription:
-      'Jorge Monge es un ingeniero fullstack JavaScript/TypeScript senior con más de 5 años construyendo y escalando plataformas SaaS en producción, desde la arquitectura hasta el código.',
+      'Jorge Monge es un ingeniero fullstack JavaScript/TypeScript senior con {years} años de experiencia construyendo y escalando plataformas SaaS en producción, desde la arquitectura hasta el código.',
     blogTitle: 'Blog',
     blogDescription:
       'Artículos sobre JavaScript, TypeScript, desarrollo web y lo que voy aprendiendo mientras construyo productos.',
@@ -29,7 +29,7 @@ export const es: Dictionary = {
     greeting: 'Hola, soy Jorge Monge',
     role: 'Ingeniero de Software Senior',
     description:
-      'Ingeniero fullstack JavaScript/TypeScript senior con más de 5 años construyendo y escalando plataformas SaaS en producción. Llevo productos de la idea a producción: backend, frontend y todo lo que hay en medio.',
+      'Ingeniero fullstack JavaScript/TypeScript senior con {years} años de experiencia construyendo y escalando plataformas SaaS en producción. Llevo productos de la idea a producción: backend, frontend y todo lo que hay en medio.',
     ctaProjects: 'Ver mis proyectos',
     ctaBlog: 'Leer el blog',
     location: 'El Salvador · Remoto',

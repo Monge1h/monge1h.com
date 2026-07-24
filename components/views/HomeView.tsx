@@ -10,6 +10,7 @@ import PostCard from '../postCard'
 import LocaleRedirect from '../localeRedirect'
 import { ContentMeta } from '../../lib/content'
 import { getDict, Locale, localizedPath, SITE_URL } from '../../lib/i18n'
+import { withYears } from '../../lib/experience'
 
 export interface HomeProps {
   locale: Locale
@@ -42,7 +43,7 @@ export default function HomeView({ locale, featured, projects, posts }: HomeProp
       <Seo
         locale={locale}
         title={dict.meta.homeTitle}
-        description={dict.meta.homeDescription}
+        description={withYears(dict.meta.homeDescription)}
         path="/"
         jsonLd={personJsonLd}
       />

@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { getDict, Locale, localizedPath } from '../../lib/i18n'
+import { withYears } from '../../lib/experience'
 import { GitHubIcon, LinkedInIcon, MailIcon } from '../icons'
 
 export default function Hero({ locale }: { locale: Locale }) {
@@ -15,7 +16,9 @@ export default function Hero({ locale }: { locale: Locale }) {
         <h1 className="mt-4 text-4xl font-bold tracking-tight text-white sm:text-5xl">
           {dict.hero.greeting} <span aria-hidden="true">🥝</span>
         </h1>
-        <p className="mt-5 text-lg leading-relaxed text-zinc-400">{dict.hero.description}</p>
+        <p className="mt-5 text-lg leading-relaxed text-zinc-400">
+          {withYears(dict.hero.description)}
+        </p>
 
         <div className="mt-8 flex flex-wrap justify-center gap-3 md:justify-start">
           <Link
