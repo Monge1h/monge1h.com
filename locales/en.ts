@@ -62,7 +62,7 @@ export const en = {
       },
       {
         title: 'Software Engineer',
-        company: 'Terapify (Healthtech SaaS)',
+        company: 'Terapify (YC W21 · Healthtech)',
         type: 'Fullstack',
         period: 'May 2022 to Oct 2023',
         location: 'Remote',

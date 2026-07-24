@@ -64,7 +64,7 @@ export const es: Dictionary = {
       },
       {
         title: 'Ingeniero de Software',
-        company: 'Terapify (SaaS de healthtech)',
+        company: 'Terapify (YC W21 · Healthtech)',
         type: 'Fullstack',
         period: 'May 2022 a Oct 2023',
         location: 'Remoto',
