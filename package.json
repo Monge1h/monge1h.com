@@ -24,7 +24,7 @@
     "node": ">=18"
   },
   "devDependencies": {
-    "@playwright/test": "^1.41.2",
+    "@playwright/test": "^1.61.1",
     "@tailwindcss/typography": "^0.5.10",
     "@types/node": "18.11.0",
     "@types/react": "18.2.0",
