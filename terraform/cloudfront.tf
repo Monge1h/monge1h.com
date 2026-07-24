@@ -20,19 +20,39 @@ variable "custom_domain_zone_name" {
 
 resource "aws_acm_certificate" "custom_domain" {
   domain_name       = "*.${var.custom_domain}"
-  validation_method = "EMAIL"
+  validation_method = "DNS"
 
   subject_alternative_names = ["${var.custom_domain}"]
 
   tags = {
     Name = "monge1h-website"
   }
+
+  lifecycle {
+    create_before_destroy = true
+  }
 }
 
 
-# I create this host zone manually in the AWS console before :( 
+# I create this host zone manually in the AWS console before :(
 data "aws_route53_zone" "custom_domain_zone" {
   name = var.custom_domain_zone_name
+}
+
+# The apex and the wildcard share the exact same ACM validation record,
+# so a single record validates both domains on the certificate.
+resource "aws_route53_record" "cert_validation" {
+  allow_overwrite = true
+  zone_id         = data.aws_route53_zone.custom_domain_zone.zone_id
+  name            = tolist(aws_acm_certificate.custom_domain.domain_validation_options)[0].resource_record_name
+  type            = tolist(aws_acm_certificate.custom_domain.domain_validation_options)[0].resource_record_type
+  records         = [tolist(aws_acm_certificate.custom_domain.domain_validation_options)[0].resource_record_value]
+  ttl             = 60
+}
+
+resource "aws_acm_certificate_validation" "custom_domain" {
+  certificate_arn         = aws_acm_certificate.custom_domain.arn
+  validation_record_fqdns = [aws_route53_record.cert_validation.fqdn]
 }
 
 resource "aws_route53_record" "cloudfront_distribution_root" {
@@ -92,10 +112,6 @@ resource "aws_cloudfront_distribution" "distribution" {
     viewer_protocol_policy = "redirect-to-https"
     compress               = true
 
-    min_ttl     = 0
-    default_ttl = 86400
-    max_ttl     = 31536000
-
     origin_request_policy_id = data.aws_cloudfront_origin_request_policy.managed_cors_s3_origin.id
     cache_policy_id          = data.aws_cloudfront_cache_policy.managed_caching_optimized_uncompressed.id
 
@@ -140,7 +156,7 @@ resource "aws_cloudfront_distribution" "distribution" {
 
 
   viewer_certificate {
-    acm_certificate_arn = aws_acm_certificate.custom_domain.arn
+    acm_certificate_arn = aws_acm_certificate_validation.custom_domain.certificate_arn
     ssl_support_method  = "sni-only"
   }
 
